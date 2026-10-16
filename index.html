@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Belhassen Jouini, superviseur d’entrepôt et chef d’équipe logistique à Tunis."
+  >
+  <title>Belhassen Jouini | Logistique &amp; Gestion des stocks</title>
+
+  <style>
+    :root {
+      --navy: #082C60;
+      --blue: #1677C8;
+      --pale-blue: #EAF3FF;
+      --white: #ffffff;
+      --text: #1d2b3a;
+      --muted: #64748b;
+      --border: #d7e5f5;
+      --background: #f7faff;
+      --shadow: 0 18px 50px rgba(8, 44, 96, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--background);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    /* Navigation */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      color: var(--navy);
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 90px 0 76px;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 85% 25%, rgba(22, 119, 200, 0.40), transparent 27%),
+        linear-gradient(135deg, var(--navy), #0b3976 65%, #10549a);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      right: -100px;
+      bottom: -230px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 35px rgba(255, 255, 255, 0.03),
+        0 0 0 75px rgba(255, 255, 255, 0.025);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 7px 13px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 999px;
+      color: #d8eaff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin-bottom: 14px;
+      font-size: clamp(2.6rem, 7vw, 4.5rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    .hero h2 {
+      margin-bottom: 20px;
+      color: #c9e2ff;
+      font-size: clamp(1.05rem, 3vw, 1.4rem);
+      font-weight: 600;
+    }
+
+    .hero p {
+      max-width: 700px;
+      color: #e5f0ff;
+      font-size: 1.05rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 46px;
+      padding: 11px 19px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: var(--navy);
+      background: var(--white);
+    }
+
+    .button-primary:hover {
+      background: var(--pale-blue);
+    }
+
+    .button-outline {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.55);
+      background: transparent;
+    }
+
+    .button-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Main layout */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 310px minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+      padding: 38px 0 55px;
+    }
+
+    .sidebar,
+    .content-card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 92px;
+      padding: 26px;
+    }
+
+    .content-card {
+      margin-bottom: 22px;
+      padding: 30px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+      color: var(--navy);
+      font-size: 1.35rem;
+      line-height: 1.3;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 5px;
+      height: 27px;
+      flex: 0 0 5px;
+      border-radius: 4px;
+      background: var(--blue);
+    }
+
+    .sidebar-section + .sidebar-section {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .sidebar h2 {
+      margin-bottom: 14px;
+      color: var(--navy);
+      font-size: 1.02rem;
+    }
+
+    .contact-list,
+    .plain-list {
+      list-style: none;
+    }
+
+    .contact-list li,
+    .plain-list li {
+      margin: 10px 0;
+      overflow-wrap: anywhere;
+      font-size: 0.93rem;
+    }
+
+    .contact-list a {
+      color: var(--blue);
+    }
+
+    .contact-list a:hover {
+      text-decoration: underline;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      list-style: none;
+    }
+
+    .skill-list li {
+      padding: 7px 10px;
+      border: 1px solid #d5e7fb;
+      border-radius: 7px;
+      color: var(--navy);
+      background: var(--pale-blue);
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+
+    /* Profile and stats */
+    .profile-text {
+      color: #415367;
+      font-size: 1rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .stat {
+      padding: 17px 12px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--pale-blue);
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.65rem;
+      line-height: 1.2;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    /* Experience */
+    .experience-item {
+      position: relative;
+      padding: 0 0 25px 20px;
+      border-left: 2px solid var(--border);
+    }
+
+    .experience-item:last-child {
+      padding-bottom: 0;
+      border-left-color: transparent;
+    }
+
+    .experience-item::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -7px;
+      width: 12px;
+      height: 12px;
+      border: 2px solid var(--white);
+      border-radius: 50%;
+      background: var(--blue);
+      box-shadow: 0 0 0 2px var(--blue);
+    }
+
+    .experience-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+    }
+
+    .experience-heading h3,
+    .item-title {
+      color: var(--navy);
+      font-size: 1.02rem;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .company {
+      margin: 4px 0 10px;
+      color: var(--blue);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .experience-item ul {
+      padding-left: 19px;
+      color: #415367;
+    }
+
+    .experience-item li {
+      margin: 6px 0;
+    }
+
+    .subsection + .subsection {
+      margin-top: 22px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+    }
+
+    .subsection p {
+      margin-top: 4px;
+      color: #526579;
+    }
+
+    /* Footer */
+    footer {
+      padding: 24px 0;
+      color: #d8eaff;
+      background: var(--navy);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--white);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* Responsive */
+    @media (max-width: 850px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        padding: 14px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .nav-links {
+        gap: 10px 16px;
+      }
+
+      .hero {
+        padding: 65px 0 58px;
+      }
+
+      .main-grid {
+        padding-top: 22px;
+      }
+
+      .sidebar,
+      .content-card {
+        padding: 22px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-heading {
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#accueil">BELHASSEN JOUINI</a>
+      <ul class="nav-links">
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#experience">Expérience</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#formation">Formation</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="accueil">
+    <div class="container hero-content">
+      <span class="eyebrow">Professionnel de la logistique</span>
+      <h1>Belhassen JOUINI</h1>
+      <h2>Superviseur d’entrepôt | Chef d’équipe logistique</h2>
+      <p>
+        Professionnel de la logistique et de la gestion des stocks, spécialisé dans
+        l’organisation des opérations, l’encadrement d’équipe et l’amélioration des flux
+        en environnement à fort volume.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="mailto:jouinibelhassen715@gmail.com">
+          Me contacter
+        </a>
+        <a
+          class="button button-outline"
+          href="https://www.linkedin.com/in/belhassen-jouini-b397b112a/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Voir mon LinkedIn
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <aside class="sidebar">
+      <section class="sidebar-section" id="contact">
+        <h2>Contact</h2>
+        <ul class="contact-list">
+          <li>Tunis, Tunisie</li>
+          <li><a href="tel:+21624292113">+216 24 292 113</a></li>
+          <li>
+            <a href="mailto:jouinibelhassen715@gmail.com">
+              jouinibelhassen715@gmail.com
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/belhassen-jouini-b397b112a/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin.com/in/belhassen-jouini-b397b112a
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="sidebar-section" id="competences">
+        <h2>Compétences techniques</h2>
+        <ul class="skill-list">
+          <li>Logistique</li>
+          <li>Gestion des stocks</li>
+          <li>Supervision d’entrepôt</li>
+          <li>Inventaires</li>
+          <li>Réception</li>
+          <li>Picking &amp; packing</li>
+          <li>Expédition</li>
+          <li>ERP / WMS</li>
+          <li>Excel</li>
+          <li>Google Sheets</li>
+          <li>Tableaux de bord</li>
+          <li>KPI</li>
+          <li>Maintenance industrielle</li>
+          <li>Siemens</li>
+          <li>SST / HSE</li>
+        </ul>
+      </section>
+
+      <section class="sidebar-section">
+        <h2>Compétences clés</h2>
+        <ul class="plain-list">
+          <li>Encadrement d’équipe</li>
+          <li>Organisation des opérations</li>
+          <li>Analyse des écarts de stock</li>
+          <li>Respect des procédures HSE</li>
+        </ul>
+      </section>
+
+      <section class="sidebar-section">
+        <h2>Langues</h2>
+        <ul class="plain-list">
+          <li>Arabe — langue maternelle</li>
+          <li>Français — niveau avancé</li>
+          <li>Anglais — niveau débutant</li>
+        </ul>
+      </section>
+
+      <section class="sidebar-section">
+        <h2>Qualités</h2>
+        <ul class="plain-list">
+          <li>Rigueur et organisation</li>
+          <li>Leadership</li>
+          <li>Polyvalence</li>
+          <li>Esprit d’équipe</li>
+        </ul>
+      </section>
+    </aside>
+
+    <div class="main-content">
+      <section class="content-card" id="profil">
+        <h2 class="section-title">Profil professionnel</h2>
+        <p class="profile-text">
+          Professionnel de la logistique et de la gestion des stocks avec près de 8 ans
+          d’expérience en environnement à fort volume. Expertise en optimisation des flux,
+          inventaires, encadrement d’équipe et suivi des KPI via ERP/WMS et outils
+          bureautiques. Reconnu pour sa rigueur, son sens de l’organisation et le respect
+          des normes HSE.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>98 %</strong>
+            <span>Précision des stocks</span>
+          </div>
+          <div class="stat">
+            <strong>900</strong>
+            <span>Commandes par jour en pointe</span>
+          </div>
+          <div class="stat">
+            <strong>≈ 100</strong>
+            <span>Factures par jour</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-card" id="experience">
+        <h2 class="section-title">Expérience professionnelle</h2>
+
+        <div class="experience-item">
+          <div class="experience-heading">
+            <h3>Assistant responsable de stock</h3>
+            <span class="date">Nov. 2024 – Aujourd’hui</span>
+          </div>
+          <p class="company">Arvea Nature — Tunis, Tunisie</p>
+          <ul>
+            <li>
+              Planifier et coordonner les opérations quotidiennes de réception, stockage,
+              préparation et distribution dans un centre à fort volume.
+            </li>
+            <li>
+              Encadrer les équipes, répartir les tâches, accompagner la formation et
+              ajuster les priorités selon les volumes et les délais.
+            </li>
+            <li>
+              Piloter environ 100 factures et jusqu’à 900 commandes par jour en période
+              de pointe, dans le respect des délais opérationnels.
+            </li>
+            <li>
+              Maintenir 98 % de précision des stocks grâce aux inventaires réguliers,
+              au rapprochement physique/système et à l’analyse des écarts.
+            </li>
+            <li>
+              Créer et actualiser des tableaux de bord Excel et Google Sheets pour suivre
+              les volumes, retards, commandes et écarts de stock.
+            </li>
+            <li>
+              Garantir l’application des procédures SST et des standards de qualité,
+              de propreté et de traçabilité.
+            </li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-heading">
+            <h3>Responsable des opérations d’entrepôt — supervision</h3>
+            <span class="date">Oct. 2023 – Nov. 2024</span>
+          </div>
+          <p class="company">Arvea Nature — Tunis, Tunisie</p>
+          <ul>
+            <li>
+              Superviser le stockage, la logistique interne et la distribution afin
+              d’assurer la continuité des flux.
+            </li>
+            <li>
+              Adapter les plannings, ressources et priorités aux variations de volume
+              et aux objectifs opérationnels.
+            </li>
+            <li>
+              Améliorer les processus de réception, de préparation des commandes et
+              d’expédition pour fluidifier les opérations.
+            </li>
+            <li>
+              Contrôler l’application des procédures de sécurité, de qualité et de
+              traçabilité au sein de l’entrepôt.
+            </li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-heading">
+            <h3>Employé de dépôt</h3>
+            <span class="date">Avr. 2019 – Oct. 2023</span>
+          </div>
+          <p class="company">Arvea Nature — Tunis, Tunisie</p>
+          <ul>
+            <li>
+              Réceptionner, contrôler, enregistrer, ranger, préparer et expédier les
+              marchandises conformément aux procédures internes.
+            </li>
+            <li>
+              Réaliser le picking et le packing en garantissant l’exactitude des
+              commandes, enregistrer les mouvements et participer aux inventaires.
+            </li>
+            <li>
+              Effectuer un stage interne d’un mois comme agent de caisse : enregistrement,
+              traitement et transmission des commandes réglées.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="content-card">
+        <h2 class="section-title">Outils et suivi de performance</h2>
+        <p class="profile-text">
+          ERP/WMS, outils digitaux logistiques et pointage ; MS Excel et Google Sheets
+          pour les tableaux de bord. Suivi des KPI, volumes, commandes, retards et écarts
+          de stock ; inventaires réguliers. Application des normes HSE/SST, prévention
+          des risques, qualité, propreté et traçabilité.
+        </p>
+      </section>
+
+      <section class="content-card">
+        <h2 class="section-title">Expérience technique</h2>
+
+        <div class="subsection">
+          <div class="experience-heading">
+            <h3 class="item-title">Technicien SAV — maintenance industrielle</h3>
+            <span class="date">Avr. 2016 – Juil. 2016</span>
+          </div>
+          <p class="company">MULTIVAC — Tunis</p>
+          <p>
+            Installer, régler et assurer la maintenance préventive et corrective de
+            machines d’emballage ; diagnostiquer les pannes mécaniques et électriques sur
+            les barres de soudure et les pompes à vide.
+          </p>
+        </div>
+
+        <div class="subsection">
+          <div class="experience-heading">
+            <h3 class="item-title">Stagiaire technicien maintenance</h3>
+            <span class="date">Sept. 2010 – Janv. 2011</span>
+          </div>
+          <p class="company">PLASTIC TUNISIE — Tunis</p>
+          <p>
+            Assurer le suivi technique et participer à la maintenance des équipements
+            de production en milieu industriel.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-card" id="formation">
+        <h2 class="section-title">Formation et certification</h2>
+
+        <div class="subsection">
+          <h3 class="item-title">BTS, Automatisme et informatique industrielle</h3>
+          <p>
+            Centre Sectoriel de Formation en Électronique de Ben Arous — 2011.
+            Automates Siemens, câblage, électronique analogique et numérique.
+          </p>
+        </div>
+
+        <div class="subsection">
+          <h3 class="item-title">Baccalauréat technique</h3>
+          <p>2005</p>
+        </div>
+
+        <div class="subsection">
+          <h3 class="item-title">SST et lutte contre l’incendie</h3>
+          <p>Donia Formation &amp; Sécurité / Arvea Nature — octobre 2022</p>
+        </div>
+      </section>
+
+      <section class="content-card">
+        <p><strong>Références disponibles sur demande.</strong></p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      Belhassen JOUINI · Tunis, Tunisie ·
+      <a href="https://www.linkedin.com/in/belhassen-jouini-b397b112a/"
+         target="_blank"
+         rel="noopener noreferrer">
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
