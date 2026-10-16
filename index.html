@@ -92,11 +92,11 @@
       color: var(--blue);
     }
 
-    /* Hero */
+    /* Hero avec photo */
     .hero {
       position: relative;
       overflow: hidden;
-      padding: 90px 0 76px;
+      padding: 76px 0;
       color: var(--white);
       background:
         radial-gradient(circle at 85% 25%, rgba(22, 119, 200, 0.40), transparent 27%),
@@ -115,12 +115,20 @@
       box-shadow:
         0 0 0 35px rgba(255, 255, 255, 0.03),
         0 0 0 75px rgba(255, 255, 255, 0.025);
+      pointer-events: none;
+    }
+
+    .hero-layout {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      align-items: center;
+      gap: 55px;
     }
 
     .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 780px;
+      max-width: 720px;
     }
 
     .eyebrow {
@@ -150,7 +158,7 @@
       font-weight: 600;
     }
 
-    .hero p {
+    .hero-content > p {
       max-width: 700px;
       color: #e5f0ff;
       font-size: 1.05rem;
@@ -196,6 +204,31 @@
 
     .button-outline:hover {
       background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Photo professionnelle */
+    .portrait-frame {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio: 4 / 5;
+      justify-self: end;
+      padding: 9px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.14);
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.28);
+    }
+
+    .portrait-frame img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      object-fit: cover;
+      object-position: center 24%;
+      background: var(--pale-blue);
     }
 
     /* Main layout */
@@ -294,7 +327,7 @@
       font-weight: 600;
     }
 
-    /* Profile and stats */
+    /* Profil et chiffres */
     .profile-text {
       color: #415367;
       font-size: 1rem;
@@ -329,7 +362,7 @@
       font-size: 0.82rem;
     }
 
-    /* Experience */
+    /* Expérience */
     .experience-item {
       position: relative;
       padding: 0 0 25px 20px;
@@ -418,6 +451,11 @@
 
     /* Responsive */
     @media (max-width: 850px) {
+      .hero-layout {
+        grid-template-columns: minmax(0, 1fr) 260px;
+        gap: 32px;
+      }
+
       .main-grid {
         grid-template-columns: 1fr;
       }
@@ -440,7 +478,18 @@
       }
 
       .hero {
-        padding: 65px 0 58px;
+        padding: 48px 0;
+      }
+
+      .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .portrait-frame {
+        width: min(260px, 75%);
+        justify-self: start;
+        grid-row: 1;
       }
 
       .main-grid {
@@ -479,27 +528,39 @@
   </nav>
 
   <header class="hero" id="accueil">
-    <div class="container hero-content">
-      <span class="eyebrow">Professionnel de la logistique</span>
-      <h1>Belhassen JOUINI</h1>
-      <h2>Superviseur d’entrepôt | Chef d’équipe logistique</h2>
-      <p>
-        Professionnel de la logistique et de la gestion des stocks, spécialisé dans
-        l’organisation des opérations, l’encadrement d’équipe et l’amélioration des flux
-        en environnement à fort volume.
-      </p>
-      <div class="hero-actions">
-        <a class="button button-primary" href="mailto:jouinibelhassen715@gmail.com">
-          Me contacter
-        </a>
-        <a
-          class="button button-outline"
-          href="https://www.linkedin.com/in/belhassen-jouini-b397b112a/"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div class="container hero-layout">
+      <div class="hero-content">
+        <span class="eyebrow">Professionnel de la logistique</span>
+        <h1>Belhassen JOUINI</h1>
+        <h2>Superviseur d’entrepôt | Chef d’équipe logistique</h2>
+        <p>
+          Professionnel de la logistique et de la gestion des stocks, spécialisé dans
+          l’organisation des opérations, l’encadrement d’équipe et l’amélioration des flux
+          en environnement à fort volume.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="mailto:jouinibelhassen715@gmail.com">
+            Me contacter
+          </a>
+          <a
+            class="button button-outline"
+            href="https://www.linkedin.com/in/belhassen-jouini-b397b112a/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Voir mon LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div class="portrait-frame">
+        <img
+          src="profile.png"
+          alt="Portrait professionnel de Belhassen Jouini"
+          width="1071"
+          height="1469"
         >
-          Voir mon LinkedIn
-        </a>
       </div>
     </div>
   </header>
@@ -762,9 +823,11 @@
   <footer>
     <div class="container">
       Belhassen JOUINI · Tunis, Tunisie ·
-      <a href="https://www.linkedin.com/in/belhassen-jouini-b397b112a/"
-         target="_blank"
-         rel="noopener noreferrer">
+      <a
+        href="https://www.linkedin.com/in/belhassen-jouini-b397b112a/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         LinkedIn
       </a>
     </div>
