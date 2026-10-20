@@ -1,132 +1,171 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Belhassen Jouini</title>
-<meta name="description" content="Portfolio de Belhassen Jouini — حلول رقمية عملية / Solutions numériques pratiques.">
-<meta name="theme-color" content="#0b1322">
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+<title>Belhassen Jouini — Gestion des stocks et logistique</title>
+<meta name="description" content="Belhassen Jouini, professionnel de la logistique et de la gestion des stocks (près de 8 ans en entrepôt à fort volume). CV téléchargeables. / مختص في اللوجستيك وتسيير المخزون.">
+<meta name="theme-color" content="#082C60">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23082C60'/%3E%3Ctext x='32' y='43' font-size='30' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EBJ%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Belhassen Jouini — Gestion des stocks et logistique">
+<meta property="og:description" content="Près de 8 ans en entrepôt à fort volume : stocks, e-commerce, encadrement d'équipe. CV téléchargeables.">
+<meta property="og:image" content="https://jouinibelhassen715-cmd.github.io/photo.jpg">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Belhassen Jouini","jobTitle":"Assistant responsable de stock","worksFor":{"@type":"Organization","name":"Arvea Nature"},"address":{"@type":"PostalAddress","addressLocality":"Tunis","addressCountry":"TN"},"email":"mailto:jouinibelhassen715@gmail.com","sameAs":["https://www.linkedin.com/in/belhassen-jouini-b397b112a/"],"knowsLanguage":["ar","fr","en"]}</script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0b1322;--bg2:#111d34;--ink:#e9eef8;--mute:#93a1ba;--line:#223250;--acc:#d9b778}
+:root{--navy:#082C60;--blue:#1677C8;--sky:#EAF3FF;--ink:#0d1b33;--mute:#4a5b78;--line:#cfe0f4}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Cairo',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:'Cairo',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.75;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:4px}
-.wrap{max-width:900px;margin:0 auto;padding:0 22px}
-header{position:sticky;top:0;z-index:10;background:rgba(11,19,34,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
-.logo{font-weight:900;letter-spacing:.01em}
-nav{display:flex;gap:22px;font-size:.92rem;color:var(--mute)}
-nav a:hover{color:var(--ink)}
-.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:.8rem;font-weight:600}
-.lang button{background:none;border:0;color:var(--mute);padding:5px 14px;cursor:pointer;font:inherit}
-.lang button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
-.hero{padding:clamp(64px,14vw,140px) 0 clamp(56px,10vw,96px)}
-.hero h1{font-size:clamp(2.7rem,10vw,5.6rem);line-height:1.05;font-weight:900;letter-spacing:-.015em}
-.hero .bar{width:72px;height:3px;background:var(--acc);margin:26px 0}
-.role{font-size:clamp(1.15rem,3vw,1.5rem);font-weight:600;color:var(--acc)}
-.lede{max-width:56ch;color:var(--mute);margin-top:14px;font-size:1.05rem}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
-.btn{display:inline-block;padding:11px 24px;border-radius:999px;font-weight:700;font-size:.95rem;border:1px solid var(--line);transition:border-color .2s,background .2s}
-.btn.main{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.btn:hover{border-color:var(--acc)}
-section{padding:clamp(48px,8vw,80px) 0;border-top:1px solid var(--line)}
-h2{font-size:1.7rem;font-weight:800;margin-bottom:28px}
-.proj{display:grid;grid-template-columns:1fr 1.7fr;gap:12px 40px;padding:28px 0;border-top:1px solid var(--line)}
-.proj:first-of-type{border-top:0;padding-top:0}
-.proj h3{font-size:1.5rem;font-weight:800}
-.tags{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:.82rem;color:var(--mute)}
-.proj p{color:#c5cfe2}
-.links{display:flex;gap:20px;margin-top:16px;font-weight:700;font-size:.92rem}
-.links a{color:var(--acc);border-bottom:1px solid transparent}
-.links a:hover{border-color:var(--acc)}
-.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 40px}
-.skills dt{font-weight:700}
-.skills dd{color:var(--mute);font-size:.95rem}
-.contact p{color:var(--mute);max-width:52ch}
-.mail{display:inline-block;margin-top:18px;font-size:clamp(1.15rem,4.5vw,1.9rem);font-weight:800;direction:ltr;border-bottom:2px solid var(--acc);word-break:break-all}
-.social{display:flex;gap:22px;margin-top:22px;color:var(--mute);font-weight:600}
-.social a:hover{color:var(--ink)}
-footer{border-top:1px solid var(--line);padding:26px 0;color:var(--mute);font-size:.85rem}
-.hero .wrap>*{animation:in .7s both}
-.hero .wrap>*:nth-child(2){animation-delay:.08s}.hero .wrap>*:nth-child(3){animation-delay:.16s}
-@keyframes in{from{opacity:0;transform:translateY(14px)}}
-@media(max-width:700px){nav{display:none}.proj,.skills{grid-template-columns:1fr}}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-weight:900;color:var(--navy);font-size:1.1rem}
+nav{display:flex;gap:24px;font-size:.92rem;font-weight:600;color:var(--mute)}
+nav a{padding-bottom:2px;border-bottom:2px solid transparent}
+nav a:hover{color:var(--navy)}
+nav a.on{color:var(--navy);border-color:var(--blue)}
+.skip{position:absolute;inset-inline-start:-999px}
+.skip:focus{inset-inline-start:12px;top:12px;background:var(--navy);color:#fff;padding:8px 14px;border-radius:8px;z-index:20}
+.tools{display:flex;align-items:center;gap:10px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:.8rem;font-weight:700}
+.lang button{background:none;border:0;color:var(--mute);padding:5px 13px;cursor:pointer;font:inherit}
+.lang button[aria-pressed=true]{background:var(--navy);color:#fff}
+.btn{display:inline-block;padding:11px 24px;border-radius:999px;font-weight:700;font-size:.95rem;border:2px solid var(--navy);color:var(--navy);transition:background .2s,color .2s}
+.btn:hover{background:var(--sky)}
+.btn.main{background:var(--navy);color:#fff}
+.btn.main:hover{background:var(--blue);border-color:var(--blue)}
+.btn.sm{padding:6px 16px;font-size:.85rem}
+.hero{background:var(--sky);padding:clamp(40px,8vw,88px) 0}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,7vw,4rem);line-height:1.1;font-weight:900;color:var(--navy);letter-spacing:-.01em}
+.role{margin-top:14px;font-size:clamp(1rem,2.6vw,1.25rem);font-weight:700;color:var(--blue)}
+.lede{margin-top:16px;color:var(--mute);max-width:52ch;font-size:1.05rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.ph{position:relative;max-width:360px;justify-self:center;width:100%}
+.ph::before{content:"";position:absolute;inset:18px -18px -18px 18px;background:var(--navy);border-radius:28px}
+[dir=rtl] .ph::before{inset:18px 18px -18px -18px}
+.ph img{position:relative;display:block;width:100%;height:auto;border-radius:28px;background:#fff}
+.kpi{background:var(--navy);color:#fff}
+.kpi .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-top:26px;padding-bottom:26px;text-align:center}
+.kpi b{display:block;font-size:clamp(1.8rem,6vw,2.6rem);font-weight:900;line-height:1.2}
+.kpi span{font-size:.85rem;color:#bcd6f5}
+section{padding:clamp(48px,8vw,80px) 0}
+section.alt{background:var(--sky)}
+h2{font-size:1.7rem;font-weight:800;color:var(--navy);margin-bottom:26px}
+.about{max-width:68ch;font-size:1.05rem;color:#22324e}
+.job{display:grid;grid-template-columns:190px 1fr;gap:6px 32px;padding:24px 0;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0;padding-top:0}
+.job time{font-weight:700;color:var(--blue);font-size:.92rem}
+.job h3{font-size:1.15rem;font-weight:800;color:var(--navy)}
+.job .org{color:var(--mute);font-size:.92rem;margin-bottom:6px}
+.job li{margin-inline-start:1.1em;color:#22324e}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:24px 40px}
+.skills dt{font-weight:800;color:var(--navy)}
+.skills dd{color:var(--mute)}
+.edu p{margin-bottom:12px}.edu b{color:var(--navy)}
+.cv{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
+.cv:first-of-type{border-top:0}
+.cv h3{font-size:1.05rem;font-weight:800;color:var(--navy)}
+.cv p{color:var(--mute);font-size:.9rem}
+.cv div:last-child{display:flex;gap:8px;flex-shrink:0}
+.ct a.big{display:inline-block;font-size:clamp(1.1rem,4.5vw,1.8rem);font-weight:800;color:var(--navy);direction:ltr;border-bottom:3px solid var(--blue);word-break:break-all}
+.ct ul{list-style:none;margin-top:20px;display:grid;gap:6px}
+.ct li{color:var(--mute)}.ct li a{font-weight:700;color:var(--blue);direction:ltr;unicode-bidi:embed}
+footer{background:var(--navy);color:#bcd6f5;padding:22px 0;font-size:.85rem}
+.hero .wrap>*{animation:in .6s both}.hero .wrap>*:nth-child(2){animation-delay:.1s}
+@keyframes in{from{opacity:0;transform:translateY(12px)}}
+@media(max-width:760px){html{scroll-padding-top:112px}header .wrap{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:8px}nav{order:3;width:100%;overflow-x:auto;gap:18px;white-space:nowrap}.hero .wrap{grid-template-columns:1fr}.ph{order:-1;max-width:260px}.job,.skills{grid-template-columns:1fr}.cv{flex-direction:column;align-items:flex-start}}
+@media print{header,.cta,.lang,.cv>div:last-child,footer,.ph::before{display:none}body{color:#000}.hero,section.alt{background:#fff}.kpi{background:#fff;color:#000;border-block:1px solid #000}.kpi span{color:#333}section{padding:24px 0}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}}
 </style>
 </head>
 <body>
+<a class="skip" href="#profil">Contenu / المحتوى</a>
 <header><div class="wrap">
 <a href="#top" class="logo" dir="ltr">B. Jouini</a>
 <nav id="nav"></nav>
-<div class="lang" role="group" aria-label="Langue / اللغة">
-<button data-l="ar" aria-pressed="true">عربي</button><button data-l="fr" aria-pressed="false">FR</button>
-</div>
-</div></header>
+<div class="tools">
+<a class="btn main sm" href="#cv" id="hCv"></a>
+<div class="lang" role="group" aria-label="Langue / اللغة"><button data-l="fr">FR</button><button data-l="ar">عربي</button></div>
+</div></div></header>
 
 <main id="top">
 <div class="hero"><div class="wrap">
-<h1 id="name"></h1>
-<div class="bar"></div>
-<div><p class="role" id="role"></p><p class="lede" id="lede"></p>
-<div class="cta"><a class="btn main" href="#projects" id="cta1"></a><a class="btn" href="#contact" id="cta2"></a></div></div>
+<div><h1>Belhassen<br>JOUINI</h1><p class="role" id="role"></p><p class="lede" id="lede"></p>
+<div class="cta"><a class="btn main" href="#cv" id="cta1"></a><a class="btn" href="#contact" id="cta2"></a></div></div>
+<div class="ph"><img src="photo.jpg" width="720" height="899" alt="Belhassen Jouini"></div>
 </div></div>
+<div class="kpi"><div class="wrap" id="kpi"></div></div>
 
-<section id="projects"><div class="wrap"><h2 id="hProj"></h2><div id="projList"></div></div></section>
+<section id="profil"><div class="wrap"><h2 id="hAbout"></h2><p class="about" id="about"></p></div></section>
+<section id="exp" class="alt"><div class="wrap"><h2 id="hExp"></h2><div id="jobs"></div></div></section>
 <section id="skills"><div class="wrap"><h2 id="hSkill"></h2><dl class="skills" id="skillList"></dl></div></section>
-<section id="contact" class="contact"><div class="wrap"><h2 id="hContact"></h2><p id="contactP"></p>
-<a class="mail" id="mail"></a>
-<div class="social"><a id="gh" target="_blank" rel="noopener">GitHub</a></div></div></section>
+<section id="edu" class="alt"><div class="wrap edu"><h2 id="hEdu"></h2><div id="eduList"></div></div></section>
+<section id="cv"><div class="wrap"><h2 id="hCvs"></h2><p class="about" id="cvP" style="margin-bottom:14px"></p><div id="cvList"></div></div></section>
+<section id="contact" class="alt ct"><div class="wrap"><h2 id="hCt"></h2><a class="big" id="mail"></a><div class="cta" id="ctBtns"></div><ul id="ctList"></ul></div></section>
 </main>
 <footer><div class="wrap" id="foot"></div></footer>
 
 <script>
-// ===== المحتوى: عدّل هنا فقط / Modifiez uniquement cette section =====
-const P={name:'Belhassen Jouini',email:'jouinibelhassen715@gmail.com',github:'https://github.com/jouinibelhassen715-cmd'};
-const C={
-ar:{nav:['المشاريع','المهارات','تواصل'],
-role:'أصمّم وأبني حلولاً رقمية عملية',
-lede:'أحوّل الأفكار إلى تطبيقات ومواقع واضحة وسهلة الاستعمال، بالعربية والفرنسية، من التصميم إلى النشر.',
-cta1:'شاهد أعمالي',cta2:'راسلني',hProj:'أعمال مختارة',hSkill:'المهارات',hContact:'لنعمل معاً',
-contactP:'عندك مشروع أو فكرة؟ راسلني وسأرد عليك في أقرب وقت.',open:'افتح التطبيق',code:'الكود المصدري',
-projects:[{t:'Dinar Smart',tags:['HTML','Tailwind CSS','JavaScript','Supabase'],
-d:'تطبيق لإدارة المالية الشخصية بالدينار التونسي: وضع للموظف ووضع للحرفي، تتبّع المعاملات، ميزانيات بتنبيهات، أهداف ادخار، وقراءة المبلغ من صورة الفاتورة. واجهة ثنائية اللغة وبيانات مؤمَّنة لكل مستخدم.',
-url:'https://dinar-smart.vercel.app',repo:P.github+'/dinar-smart'}],
-skills:[['الواجهات','HTML، CSS، JavaScript، Tailwind CSS'],['البيانات والأمان','Supabase، PostgreSQL، المصادقة وصلاحيات الصفوف (RLS)'],['النشر','GitHub، Vercel'],['اللغات','العربية، الفرنسية']],
-foot:'© '+new Date().getFullYear()+' Belhassen Jouini'},
-fr:{nav:['Projets','Compétences','Contact'],
-role:'Je conçois et construis des solutions numériques utiles',
-lede:'Je transforme des idées en applications et sites clairs, en arabe et en français, de la conception à la mise en ligne.',
-cta1:'Voir mes réalisations',cta2:'Me contacter',hProj:'Réalisations',hSkill:'Compétences',hContact:'Travaillons ensemble',
-contactP:'Un projet, une idée ? Écrivez-moi, je réponds rapidement.',open:"Ouvrir l'application",code:'Code source',
-projects:[{t:'Dinar Smart',tags:['HTML','Tailwind CSS','JavaScript','Supabase'],
-d:"Application de gestion des finances personnelles en dinar tunisien : mode salarié et mode artisan, suivi des transactions, budgets avec alertes, objectifs d'épargne et lecture du montant sur une photo de facture. Interface bilingue et données protégées par utilisateur.",
-url:'https://dinar-smart.vercel.app',repo:P.github+'/dinar-smart'}],
-skills:[['Interfaces','HTML, CSS, JavaScript, Tailwind CSS'],['Données et sécurité','Supabase, PostgreSQL, authentification et politiques RLS'],['Déploiement','GitHub, Vercel'],['Langues','Arabe, français']],
-foot:'© '+new Date().getFullYear()+' Belhassen Jouini'}
+// ===== المحتوى [Français, عربي] — عدّل هنا فقط =====
+const P={mail:'jouinibelhassen715@gmail.com',tel:'+216 24 292 113',in:'https://www.linkedin.com/in/belhassen-jouini-b397b112a/'};
+const D={
+nav:[['Profil','نبذة'],['Expérience','الخبرة'],['Compétences','المهارات'],['Formation','التكوين'],['CV','السيرة'],['Contact','تواصل']],
+role:['Gestion des stocks · Logistique · Opérations d’entrepôt','تسيير المخزون · اللوجستيك · عمليات المستودع'],
+lede:['Près de 8 ans d’expérience en entrepôt à fort volume : réception, picking/packing, expédition, inventaires et encadrement d’équipe.','قرابة 8 سنوات من الخبرة في مستودعات ذات حجم عمل كبير: الاستلام، تحضير الطلبات، الشحن، الجرد وتأطير الفرق.'],
+cta1:['Télécharger mon CV','حمّل سيرتي الذاتية'],cta2:['Me contacter','تواصل معي'],hCv:['Mon CV','السيرة الذاتية'],
+kpi:[['98 %','Précision des stocks','دقة المخزون'],['900','Commandes / jour en pointe','طلبية يومياً في الذروة'],['≈ 100','Factures / jour','فاتورة يومياً']],
+hAbout:['Profil','نبذة'],
+about:['Professionnel de la logistique et de la gestion des stocks, rigoureux et organisé. J’encadre une équipe de 3 personnes, pilote les flux e-commerce, maintiens environ 98 % de précision des stocks et applique les procédures SST, qualité et traçabilité. Ma formation technique en automatisme industriel m’apporte une vraie lecture des équipements et des processus.','مختص في اللوجستيك وتسيير المخزون، منظّم ودقيق. أؤطّر فريقاً من 3 أشخاص، وأدير تدفقات التجارة الإلكترونية، وأحافظ على دقة مخزون في حدود 98 %، وأطبّق إجراءات السلامة والجودة وتتبّع السلع. تكويني التقني في الأتمتة الصناعية يمنحني فهماً جيداً للمعدات وللعمليات.'],
+hExp:['Expérience professionnelle','الخبرة المهنية'],
+jobs:[
+{d:['Nov. 2024 – Aujourd’hui','نوفمبر 2024 – اليوم'],t:['Assistant responsable de stock','مساعد مسؤول مخزون'],o:'Arvea Nature — Tunis',b:[['Pilote les flux logistiques e-commerce et supervise jusqu’à 900 commandes par jour en période de pointe.','يدير تدفقات اللوجستيك للتجارة الإلكترونية ويشرف على ما يصل إلى 900 طلبية يومياً في الذروة.'],['Encadre 3 employés, réalise les inventaires journaliers et maintient environ 98 % de précision des stocks.','يؤطّر 3 موظفين، ينجز الجرد اليومي ويحافظ على دقة مخزون في حدود 98 %.'],['Suit les KPI sur Excel et Google Sheets et traite environ 100 factures par jour.','يتابع المؤشرات عبر Excel وGoogle Sheets ويعالج قرابة 100 فاتورة يومياً.']]},
+{d:['Oct. 2023 – Nov. 2024','أكتوبر 2023 – نوفمبر 2024'],t:['Responsable des opérations d’entrepôt — supervision','مسؤول عمليات المستودع — إشراف'],o:'Arvea Nature — Tunis',b:[['Supervise le stockage, la logistique interne et la distribution.','يشرف على التخزين واللوجستيك الداخلي والتوزيع.'],['Optimise la réception, la préparation des commandes et l’expédition.','يحسّن الاستلام وتحضير الطلبات والشحن.']]},
+{d:['Avr. 2019 – Oct. 2023','أفريل 2019 – أكتوبر 2023'],t:['Employé de dépôt','عون مستودع'],o:'Arvea Nature — Tunis',b:[['Réception, contrôle, rangement, picking/packing et expédition des marchandises.','استلام ومراقبة وترتيب البضائع وتحضير الطلبات وشحنها.'],['Enregistrement des mouvements de stock et participation aux inventaires.','تسجيل حركة المخزون والمشاركة في عمليات الجرد.']]},
+{d:['2010 – 2016','2010 – 2016'],t:['Technicien SAV, maintenance industrielle','تقني خدمة ما بعد البيع وصيانة صناعية'],o:'MULTIVAC · PLASTIC TUNISIE — Tunis',b:[['Maintenance préventive et corrective de machines d’emballage ; diagnostic des pannes mécaniques et électriques.','صيانة وقائية وإصلاحية لآلات التعبئة والتغليف وتشخيص الأعطال الميكانيكية والكهربائية.']]}],
+hSkill:['Compétences','المهارات'],
+skills:[[['Entrepôt','المستودع'],['Réception, picking/packing, expédition, inventaires, traçabilité','الاستلام، تحضير الطلبات، الشحن، الجرد، تتبّع السلع']],[['Pilotage','القيادة والمتابعة'],['KPI, tableaux de bord Excel et Google Sheets, Pointiny, plateforme interne','مؤشرات الأداء، لوحات متابعة Excel وGoogle Sheets، Pointiny، منصة داخلية']],[['Encadrement','التأطير'],['Équipe de 3, répartition des tâches, gestion des priorités','فريق من 3 أشخاص، توزيع المهام، ترتيب الأولويات']],[['Sécurité','السلامة'],['SST, procédures HSE, premiers secours, lutte contre l’incendie','السلامة المهنية، إجراءات HSE، الإسعافات الأولية، مكافحة الحرائق']],[['Technique','التقنية'],['Automates Siemens, SIMATIC Manager, maintenance','أجهزة Siemens القابلة للبرمجة، SIMATIC Manager، الصيانة']],[['Langues','اللغات'],['Arabe (langue maternelle), français (professionnel), anglais (intermédiaire)','العربية (الأم)، الفرنسية (مهنية)، الإنجليزية (متوسط)']]],
+hEdu:['Formation et certification','التكوين والشهادات'],
+edu:[['<b>BTS en Automatisme et informatique industrielle</b> — Centre Sectoriel de Formation en Électronique de Den Den, 2011.','<b>شهادة تقني سامٍ في الأتمتة والإعلامية الصناعية</b> — المركز القطاعي للتكوين في الإلكترونيك بدن دن، 2011.'],['<b>SST, premiers secours et lutte contre l’incendie</b> — Donia Formation &amp; Sécurité, oct. 2022.','<b>السلامة المهنية والإسعافات الأولية ومكافحة الحرائق</b> — Donia Formation &amp; Sécurité، أكتوبر 2022.'],['<b>Baccalauréat technique</b> — 2005.','<b>باكالوريا تقنية</b> — 2005.']],
+hCvs:['Télécharger mon CV','تحميل السيرة الذاتية'],
+cvP:['Trois versions, adaptées à chaque marché. Références disponibles sur demande.','ثلاث نسخ مناسبة لكل سوق. المراجع متوفرة عند الطلب.'],
+dl:['Télécharger','تحميل'],view:['Voir','عرض'],
+cvs:[['Belhassen-Jouini-CV-Europe.pdf',['CV — Europe francophone','سيرة — أوروبا الناطقة بالفرنسية'],['France, Belgique, Luxembourg, Suisse romande','فرنسا، بلجيكا، لوكسمبورغ، سويسرا الفرنسية']],['Belhassen-Jouini-CV-Tunisie.pdf',['CV — Tunisie','سيرة — تونس'],['Superviseur d’entrepôt, chef d’équipe logistique','مشرف مستودع، رئيس فريق لوجستي']],['Belhassen-Jouini-CV-Canada-ATS.pdf',['CV — Canada (format ATS)','سيرة — كندا (صيغة ATS)'],['Optimisé pour les logiciels de recrutement','محسّنة لبرامج فرز السير الذاتية']]],
+hCt:['Contact','تواصل'],
+wmail:['Écrire un e-mail','أرسل بريداً'],
+ct:[['Tunis, Tunisie','تونس، تونس'],['Ouvert aux opportunités en Tunisie, en Europe francophone et au Canada.','منفتح على فرص العمل في تونس وأوروبا الناطقة بالفرنسية وكندا.']],
+foot:['© '+new Date().getFullYear()+' Belhassen Jouini','© '+new Date().getFullYear()+' بلحسن الجويني']
 };
 // =====================================================================
 const $=id=>document.getElementById(id);
-const esc=s=>String(s).replace(/[&<>"']/g,c=>'&#'+c.charCodeAt(0)+';');
 function setLang(l){
-const c=C[l];
+const i=l==='fr'?0:1,t=k=>D[k][i];
 document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';
-$('nav').innerHTML=['projects','skills','contact'].map((h,i)=>`<a href="#${h}">${esc(c.nav[i])}</a>`).join('');
-$('name').textContent=P.name;$('name').dir='ltr';$('name').style.textAlign=l==='ar'?'right':'left';
-['role','lede','cta1','cta2','hProj','hSkill','hContact','contactP'].forEach(k=>$(k).textContent=c[k]);
-$('projList').innerHTML=c.projects.map(p=>`<article class="proj"><div><h3 dir="ltr" style="text-align:${l==='ar'?'right':'left'}">${esc(p.t)}</h3><div class="tags" dir="ltr">${p.tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div></div>
-<div><p>${esc(p.d)}</p><div class="links"><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(c.open)}</a><a href="${esc(p.repo)}" target="_blank" rel="noopener">${esc(c.code)}</a></div></div></article>`).join('');
-$('skillList').innerHTML=c.skills.map(s=>`<div><dt>${esc(s[0])}</dt><dd>${esc(s[1])}</dd></div>`).join('');
-$('mail').textContent=P.email;$('mail').href='mailto:'+P.email;$('gh').href=P.github;
-$('foot').textContent=c.foot;
+$('nav').innerHTML=['profil','exp','skills','edu','cv','contact'].map((h,n)=>`<a href="#${h}">${D.nav[n][i]}</a>`).join('');
+['role','lede','cta1','cta2','hCv','hAbout','about','hExp','hSkill','hEdu','hCvs','cvP','hCt'].forEach(k=>$(k).textContent=t(k));
+$('kpi').innerHTML=D.kpi.map(k=>`<div><b dir="ltr">${k[0]}</b><span>${k[i+1]}</span></div>`).join('');
+$('jobs').innerHTML=D.jobs.map(j=>`<article class="job"><time>${j.d[i]}</time><div><h3>${j.t[i]}</h3><p class="org">${j.o}</p><ul>${j.b.map(b=>`<li>${b[i]}</li>`).join('')}</ul></div></article>`).join('');
+$('skillList').innerHTML=D.skills.map(s=>`<div><dt>${s[0][i]}</dt><dd>${s[1][i]}</dd></div>`).join('');
+$('eduList').innerHTML=D.edu.map(e=>`<p>${e[i]}</p>`).join('');
+$('cvList').innerHTML=D.cvs.map(c=>`<div class="cv"><div><h3>${c[1][i]}</h3><p>${c[2][i]}</p></div><div><a class="btn sm" href="cv/${c[0]}" target="_blank" rel="noopener">${t('view')}</a><a class="btn main sm" href="cv/${c[0]}" download>${t('dl')}</a></div></div>`).join('');
+$('mail').textContent=P.mail;$('mail').href='mailto:'+P.mail;
+$('ctBtns').innerHTML=`<a class="btn main" href="mailto:${P.mail}">${D.wmail[i]}</a><a class="btn" href="https://wa.me/${P.tel.replace(/\D/g,'')}" target="_blank" rel="noopener">WhatsApp</a><a class="btn" href="${P.in}" target="_blank" rel="noopener">LinkedIn</a>`;
+$('ctList').innerHTML=`<li>${D.ct[0][i]} · <a href="tel:${P.tel.replace(/\s/g,'')}">${P.tel}</a></li><li>${D.ct[1][i]}</li>`;
+$('foot').textContent=t('foot');
+document.title=l==='fr'?'Belhassen Jouini — Gestion des stocks et logistique':'Belhassen Jouini — تسيير المخزون واللوجستيك';
 document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===l));
 try{localStorage.setItem('pf_lang',l)}catch(e){}
 }
 document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
 let l0;try{l0=localStorage.getItem('pf_lang')}catch(e){}
-setLang(l0==='fr'||l0==='ar'?l0:((navigator.language||'').startsWith('fr')?'fr':'ar'));
+setLang(l0==='ar'||l0==='fr'?l0:'fr');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+['profil','exp','skills','edu','cv','contact'].forEach(id=>io.observe($(id)));
 </script>
 </body>
 </html>
