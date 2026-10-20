@@ -10,19 +10,20 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Belhassen Jouini — Gestion des stocks et logistique">
 <meta property="og:description" content="Près de 8 ans en entrepôt à fort volume : stocks, e-commerce, encadrement d'équipe. CV téléchargeables.">
-<meta property="og:image" content="https://jouinibelhassen715-cmd.github.io/1000093468.png">
+<meta property="og:image" content="https://belhassen-jouini.vercel.app/1000093468.png">
 <meta name="twitter:card" content="summary">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Belhassen Jouini","jobTitle":"Assistant responsable de stock","worksFor":{"@type":"Organization","name":"Arvea Nature"},"address":{"@type":"PostalAddress","addressLocality":"Tunis","addressCountry":"TN"},"email":"mailto:jouinibelhassen715@gmail.com","sameAs":["https://www.linkedin.com/in/belhassen-jouini-b397b112a/"],"knowsLanguage":["ar","fr","en"]}</script>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#082C60;--blue:#1677C8;--sky:#EAF3FF;--ink:#0d1b33;--mute:#4a5b78;--line:#cfe0f4}
+:root{--navy:#082C60;--blue:#1677C8;--sky:#EAF3FF;--ink:#0d1b33;--mute:#4a5b78;--line:#d6e5f7;--sh:0 16px 36px -20px rgba(8,44,96,.45)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{font-family:'Cairo',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.75;-webkit-font-smoothing:antialiased}
+body{font-family:'Cairo',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
-.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+#prog{position:fixed;top:0;inset-inline-start:0;height:3px;width:0;background:var(--blue);z-index:30}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
 .logo{font-weight:900;color:var(--navy);font-size:1.1rem}
 nav{display:flex;gap:24px;font-size:.92rem;font-weight:600;color:var(--mute)}
@@ -30,7 +31,7 @@ nav a{padding-bottom:2px;border-bottom:2px solid transparent}
 nav a:hover{color:var(--navy)}
 nav a.on{color:var(--navy);border-color:var(--blue)}
 .skip{position:absolute;inset-inline-start:-999px}
-.skip:focus{inset-inline-start:12px;top:12px;background:var(--navy);color:#fff;padding:8px 14px;border-radius:8px;z-index:20}
+.skip:focus{inset-inline-start:12px;top:12px;background:var(--navy);color:#fff;padding:8px 14px;border-radius:8px;z-index:40}
 .tools{display:flex;align-items:center;gap:10px}
 .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:.8rem;font-weight:700}
 .lang button{background:none;border:0;color:var(--mute);padding:5px 13px;cursor:pointer;font:inherit}
@@ -40,51 +41,83 @@ nav a.on{color:var(--navy);border-color:var(--blue)}
 .btn.main{background:var(--navy);color:#fff}
 .btn.main:hover{background:var(--blue);border-color:var(--blue)}
 .btn.sm{padding:6px 16px;font-size:.85rem}
-.hero{background:var(--sky);padding:clamp(40px,8vw,88px) 0}
-.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
-.hero h1{font-size:clamp(2.3rem,7vw,4rem);line-height:1.1;font-weight:900;color:var(--navy);letter-spacing:-.01em}
-.role{margin-top:14px;font-size:clamp(1rem,2.6vw,1.25rem);font-weight:700;color:var(--blue)}
-.lede{margin-top:16px;color:var(--mute);max-width:52ch;font-size:1.05rem}
+.hero{position:relative;overflow:hidden;color:#fff;padding:clamp(44px,8vw,96px) 0 clamp(80px,10vw,128px);background:radial-gradient(800px 460px at 82% 18%,rgba(22,119,200,.6),transparent 62%),linear-gradient(160deg,#082C60 0%,#0a3677 100%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:46px 46px;-webkit-mask-image:linear-gradient(180deg,#000 10%,transparent 90%);mask-image:linear-gradient(180deg,#000 10%,transparent 90%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#e6f0fd;padding:3px 14px;border-radius:999px;font-size:.85rem;font-weight:600;margin-bottom:16px}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:#7cc4ff}
+.hero h1{font-size:clamp(2.6rem,8.5vw,4.6rem);line-height:1.04;font-weight:900;letter-spacing:-.015em}
+.role{margin-top:16px;font-size:clamp(1rem,2.6vw,1.25rem);font-weight:700;color:#8fc9ff}
+.lede{margin-top:14px;color:#d4e4f8;max-width:50ch;font-size:1.05rem}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.ph{position:relative;max-width:360px;justify-self:center;width:100%}
-.ph::before{content:"";position:absolute;inset:18px -18px -18px 18px;background:var(--navy);border-radius:28px}
-[dir=rtl] .ph::before{inset:18px 18px -18px -18px}
-.ph img{position:relative;display:block;width:100%;height:auto;border-radius:28px;background:#fff}
-.kpi{background:var(--navy);color:#fff}
-.kpi .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-top:26px;padding-bottom:26px;text-align:center}
-.kpi b{display:block;font-size:clamp(1.8rem,6vw,2.6rem);font-weight:900;line-height:1.2}
-.kpi span{font-size:.85rem;color:#bcd6f5}
-section{padding:clamp(48px,8vw,80px) 0}
+.hero .btn{border-color:#fff;color:#fff}
+.hero .btn.main{background:#fff;color:var(--navy)}
+.hero .btn:hover{background:rgba(255,255,255,.14)}
+.hero .btn.main:hover{background:var(--sky)}
+.ph{position:relative;max-width:380px;width:100%;justify-self:center}
+.arch{border-radius:999px 999px 30px 30px;overflow:hidden;aspect-ratio:4/5;background:linear-gradient(#EAF3FF,#fff);border:6px solid rgba(255,255,255,.28);box-shadow:0 34px 60px -24px rgba(0,0,0,.6)}
+.arch img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.chip{position:absolute;background:#fff;color:var(--navy);border-radius:16px;padding:10px 16px;box-shadow:var(--sh);line-height:1.25}
+.chip b{display:block;font-size:1.35rem;font-weight:900}
+.chip span{font-size:.78rem;color:var(--mute);font-weight:600}
+.c1{inset-inline-start:-26px;bottom:112px}
+.c2{inset-inline-end:-18px;bottom:34px}
+.kpi{position:relative;z-index:2;margin-top:-56px;padding:0 18px}
+.kpi .wrap{display:grid;grid-template-columns:repeat(3,1fr);max-width:860px;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:var(--sh);padding:22px 10px;text-align:center}
+.kpi .wrap>div+div{border-inline-start:1px solid var(--line)}
+.kpi b{display:block;font-size:clamp(1.7rem,6vw,2.6rem);font-weight:900;line-height:1.2;color:var(--navy)}
+.kpi span{font-size:.85rem;color:var(--mute);font-weight:600}
+section{padding:clamp(52px,8vw,88px) 0}
 section.alt{background:var(--sky)}
-h2{font-size:1.7rem;font-weight:800;color:var(--navy);margin-bottom:26px}
-.about{max-width:68ch;font-size:1.05rem;color:#22324e}
-.job{display:grid;grid-template-columns:190px 1fr;gap:6px 32px;padding:24px 0;border-top:1px solid var(--line)}
-.job:first-of-type{border-top:0;padding-top:0}
-.job time{font-weight:700;color:var(--blue);font-size:.92rem}
+h2{position:relative;font-size:clamp(1.6rem,4vw,2rem);font-weight:900;color:var(--navy);margin-bottom:32px;padding-bottom:12px}
+h2::after{content:"";position:absolute;inset-inline-start:0;bottom:0;width:48px;height:4px;border-radius:4px;background:var(--blue)}
+.about{max-width:70ch;font-size:1.12rem;color:#22324e}
+.tl{position:relative;padding-inline-start:30px}
+.tl::before{content:"";position:absolute;inset-block:8px;inset-inline-start:6px;width:2px;background:linear-gradient(var(--blue),var(--line))}
+.job{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 26px;margin-bottom:18px;box-shadow:var(--sh)}
+.job::before{content:"";position:absolute;inset-inline-start:-30px;top:30px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--blue)}
+.job time{display:inline-block;background:var(--sky);color:var(--blue);font-weight:700;font-size:.8rem;padding:2px 12px;border-radius:999px;margin-bottom:6px}
 .job h3{font-size:1.15rem;font-weight:800;color:var(--navy)}
 .job .org{color:var(--mute);font-size:.92rem;margin-bottom:6px}
 .job li{margin-inline-start:1.1em;color:#22324e}
-.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:24px 40px}
-.skills dt{font-weight:800;color:var(--navy)}
-.skills dd{color:var(--mute)}
-.edu p{margin-bottom:12px}.edu b{color:var(--navy)}
-.cv{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
-.cv:first-of-type{border-top:0}
-.cv h3{font-size:1.05rem;font-weight:800;color:var(--navy)}
-.cv p{color:var(--mute);font-size:.9rem}
-.cv div:last-child{display:flex;gap:8px;flex-shrink:0}
-.ct a.big{display:inline-block;font-size:clamp(1.1rem,4.5vw,1.8rem);font-weight:800;color:var(--navy);direction:ltr;border-bottom:3px solid var(--blue);word-break:break-all}
-.ct ul{list-style:none;margin-top:20px;display:grid;gap:6px}
-.ct li{color:var(--mute)}.ct li a{font-weight:700;color:var(--blue);direction:ltr;unicode-bidi:embed}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sk{background:#fff;border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:18px;padding:18px 20px;box-shadow:var(--sh)}
+.sk h3{font-size:1.05rem;font-weight:800;color:var(--navy);margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{background:var(--sky);color:var(--navy);font-size:.82rem;font-weight:600;padding:2px 12px;border-radius:999px}
+.edu p{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin-bottom:12px}
+.edu b{color:var(--navy)}
+.cvs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cvc{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--sh)}
+.fl{font-size:2rem;line-height:1}
+.cvc h3{font-size:1.05rem;font-weight:800;color:var(--navy)}
+.cvc p{color:var(--mute);font-size:.9rem;flex:1}
+.act{display:flex;gap:8px;margin-top:10px}
+.ct{padding-bottom:clamp(40px,7vw,72px)}
+.box{background:linear-gradient(160deg,#082C60,#0a3677);color:#fff;border-radius:28px;padding:clamp(28px,6vw,56px)}
+.box h2{color:#fff}
+.box h2::after{background:#7cc4ff}
+.box a.big{display:inline-block;font-size:clamp(1.1rem,4.5vw,1.9rem);font-weight:800;color:#fff;direction:ltr;border-bottom:3px solid #7cc4ff;word-break:break-all}
+.box .btn{border-color:#fff;color:#fff}
+.box .btn.main{background:#fff;color:var(--navy)}
+.box .btn:hover{background:rgba(255,255,255,.14)}
+.box ul{list-style:none;margin-top:22px;display:grid;gap:6px;color:#cfe0f4}
+.box li a{font-weight:700;color:#fff;direction:ltr;unicode-bidi:embed}
 footer{background:var(--navy);color:#bcd6f5;padding:22px 0;font-size:.85rem}
-.hero .wrap>*{animation:in .6s both}.hero .wrap>*:nth-child(2){animation-delay:.1s}
-@keyframes in{from{opacity:0;transform:translateY(12px)}}
-@media(max-width:760px){html{scroll-padding-top:112px}header .wrap{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:8px}nav{order:3;width:100%;overflow-x:auto;gap:18px;white-space:nowrap}.hero .wrap{grid-template-columns:1fr}.ph{order:-1;max-width:260px}.job,.skills{grid-template-columns:1fr}.cv{flex-direction:column;align-items:flex-start}}
-@media print{header,.cta,.lang,.cv>div:last-child,footer,.ph::before{display:none}body{color:#000}.hero,section.alt{background:#fff}.kpi{background:#fff;color:#000;border-block:1px solid #000}.kpi span{color:#333}section{padding:24px 0}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+.job.in:hover,.cvc.in:hover,.sk.in:hover{transform:translateY(-3px)}
+.hero .wrap>*{animation:up .7s both}
+.hero .wrap>*:nth-child(2){animation-delay:.12s}
+@keyframes up{from{opacity:0;transform:translateY(14px)}}
+@media(max-width:900px){.skills,.cvs{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){html{scroll-padding-top:112px}header .wrap{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:8px}nav{order:3;width:100%;overflow-x:auto;gap:18px;white-space:nowrap}.hero .wrap{grid-template-columns:1fr;gap:34px}.ph{order:-1;max-width:290px}.c1{inset-inline-start:-10px}.c2{inset-inline-end:-6px}.skills,.cvs{grid-template-columns:1fr}.kpi .wrap{padding:16px 4px}.kpi span{font-size:.75rem}}
+@media print{header,.cta,.lang,.act,footer,#prog,.hero::before{display:none}body{color:#000}.hero,.box{background:#fff;color:#000}.hero .role,.hero .lede,.box h2,.box a.big,.box li a{color:#000}.rv{opacity:1!important;transform:none!important}section{padding:24px 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
+<div id="prog"></div>
 <a class="skip" href="#profil">Contenu / المحتوى</a>
 <header><div class="wrap">
 <a href="#top" class="logo" dir="ltr">B. Jouini</a>
@@ -96,18 +129,18 @@ footer{background:var(--navy);color:#bcd6f5;padding:22px 0;font-size:.85rem}
 
 <main id="top">
 <div class="hero"><div class="wrap">
-<div><h1>Belhassen<br>JOUINI</h1><p class="role" id="role"></p><p class="lede" id="lede"></p>
+<div class="txt"><span class="tag" id="tag"></span><h1>Belhassen<br>JOUINI</h1><p class="role" id="role"></p><p class="lede" id="lede"></p>
 <div class="cta"><a class="btn main" href="#cv" id="cta1"></a><a class="btn" href="#contact" id="cta2"></a></div></div>
-<div class="ph"><img src="1000093468.png" onerror="this.onerror=null;this.src='photo.jpg'" width="1071" height="1469" alt="Belhassen Jouini"></div>
+<div class="ph"><div class="arch"><img src="1000093468.png" onerror="this.onerror=null;this.src='photo.jpg'" width="1071" height="1469" alt="Belhassen Jouini"></div><div class="chip c1" id="ch1"></div><div class="chip c2" id="ch2"></div></div>
 </div></div>
 <div class="kpi"><div class="wrap" id="kpi"></div></div>
 
 <section id="profil"><div class="wrap"><h2 id="hAbout"></h2><p class="about" id="about"></p></div></section>
-<section id="exp" class="alt"><div class="wrap"><h2 id="hExp"></h2><div id="jobs"></div></div></section>
-<section id="skills"><div class="wrap"><h2 id="hSkill"></h2><dl class="skills" id="skillList"></dl></div></section>
+<section id="exp" class="alt"><div class="wrap"><h2 id="hExp"></h2><div id="jobs" class="tl"></div></div></section>
+<section id="skills"><div class="wrap"><h2 id="hSkill"></h2><div class="skills" id="skillList"></div></div></section>
 <section id="edu" class="alt"><div class="wrap edu"><h2 id="hEdu"></h2><div id="eduList"></div></div></section>
-<section id="cv"><div class="wrap"><h2 id="hCvs"></h2><p class="about" id="cvP" style="margin-bottom:14px"></p><div id="cvList"></div></div></section>
-<section id="contact" class="alt ct"><div class="wrap"><h2 id="hCt"></h2><a class="big" id="mail"></a><div class="cta" id="ctBtns"></div><ul id="ctList"></ul></div></section>
+<section id="cv"><div class="wrap"><h2 id="hCvs"></h2><p class="about" id="cvP" style="margin-bottom:14px"></p><div id="cvList" class="cvs"></div></div></section>
+<section id="contact" class="ct"><div class="wrap"><div class="box"><h2 id="hCt"></h2><a class="big" id="mail"></a><div class="cta" id="ctBtns"></div><ul id="ctList"></ul></div></div></section>
 </main>
 <footer><div class="wrap" id="foot"></div></footer>
 
@@ -118,6 +151,7 @@ const D={
 nav:[['Profil','نبذة'],['Expérience','الخبرة'],['Compétences','المهارات'],['Formation','التكوين'],['CV','السيرة'],['Contact','تواصل']],
 role:['Gestion des stocks · Logistique · Opérations d’entrepôt','تسيير المخزون · اللوجستيك · عمليات المستودع'],
 lede:['Près de 8 ans d’expérience en entrepôt à fort volume : réception, picking/packing, expédition, inventaires et encadrement d’équipe.','قرابة 8 سنوات من الخبرة في مستودعات ذات حجم عمل كبير: الاستلام، تحضير الطلبات، الشحن، الجرد وتأطير الفرق.'],
+chips:[[['≈ 8 ans','d’expérience'],['≈ 8 سنوات','خبرة']],[['3','personnes encadrées'],['3','أشخاص أؤطّرهم']]],
 cta1:['Télécharger mon CV','حمّل سيرتي الذاتية'],cta2:['Me contacter','تواصل معي'],hCv:['Mon CV','السيرة الذاتية'],
 kpi:[['98 %','Précision des stocks','دقة المخزون'],['900','Commandes / jour en pointe','طلبية يومياً في الذروة'],['≈ 100','Factures / jour','فاتورة يومياً']],
 hAbout:['Profil','نبذة'],
@@ -135,7 +169,7 @@ edu:[['<b>BTS en Automatisme et informatique industrielle</b> — Centre Sectori
 hCvs:['Télécharger mon CV','تحميل السيرة الذاتية'],
 cvP:['Trois versions, adaptées à chaque marché. Références disponibles sur demande.','ثلاث نسخ مناسبة لكل سوق. المراجع متوفرة عند الطلب.'],
 dl:['Télécharger','تحميل'],view:['Voir','عرض'],
-cvs:[['Belhassen-Jouini-CV-Europe.pdf',['CV — Europe francophone','سيرة — أوروبا الناطقة بالفرنسية'],['France, Belgique, Luxembourg, Suisse romande','فرنسا، بلجيكا، لوكسمبورغ، سويسرا الفرنسية']],['Belhassen-Jouini-CV-Tunisie.pdf',['CV — Tunisie','سيرة — تونس'],['Superviseur d’entrepôt, chef d’équipe logistique','مشرف مستودع، رئيس فريق لوجستي']],['Belhassen-Jouini-CV-Canada-ATS.pdf',['CV — Canada (format ATS)','سيرة — كندا (صيغة ATS)'],['Optimisé pour les logiciels de recrutement','محسّنة لبرامج فرز السير الذاتية']]],
+cvs:[['Bj_Europe.pdf',['CV — Europe francophone','سيرة — أوروبا الناطقة بالفرنسية'],['France, Belgique, Luxembourg, Suisse romande','فرنسا، بلجيكا، لوكسمبورغ، سويسرا الفرنسية']],['Bj_Tunis.pdf',['CV — Tunisie','سيرة — تونس'],['Superviseur d’entrepôt, chef d’équipe logistique','مشرف مستودع، رئيس فريق لوجستي']],['Bj_ATS_Canda.pdf',['CV — Canada (format ATS)','سيرة — كندا (صيغة ATS)'],['Optimisé pour les logiciels de recrutement','محسّنة لبرامج فرز السير الذاتية']]],
 hCt:['Contact','تواصل'],
 wmail:['Écrire un e-mail','أرسل بريداً'],
 ct:[['Tunis, Tunisie','تونس، تونس'],['Ouvert aux opportunités en Tunisie, en Europe francophone et au Canada.','منفتح على فرص العمل في تونس وأوروبا الناطقة بالفرنسية وكندا.']],
@@ -143,6 +177,13 @@ foot:['© '+new Date().getFullYear()+' Belhassen Jouini','© '+new Date().getFul
 };
 // =====================================================================
 const $=id=>document.getElementById(id);
+const rvo=new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}}),{threshold:.1});
+const cuo=new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.unobserve(e.target);const el=e.target,txt=el.textContent,m=txt.match(/\d+/);if(!m||matchMedia('(prefers-reduced-motion:reduce)').matches)return;const n=+m[0],t0=performance.now();const st=now=>{const p=Math.min((now-t0)/1000,1);el.textContent=txt.replace(/\d+/,Math.round(n*p));if(p<1)requestAnimationFrame(st)};requestAnimationFrame(st)}),{threshold:.6});
+function fx(){
+document.querySelectorAll('section .wrap>*,.job,.sk,.cvc').forEach(el=>{if(!el.classList.contains('in')){el.classList.add('rv');rvo.observe(el)}});
+document.querySelectorAll('#kpi b').forEach(b=>cuo.observe(b));
+}
+addEventListener('scroll',()=>{const h=document.documentElement;$('prog').style.width=(h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
 function setLang(l){
 const i=l==='fr'?0:1,t=k=>D[k][i];
 document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';
@@ -150,13 +191,16 @@ $('nav').innerHTML=['profil','exp','skills','edu','cv','contact'].map((h,n)=>`<a
 ['role','lede','cta1','cta2','hCv','hAbout','about','hExp','hSkill','hEdu','hCvs','cvP','hCt'].forEach(k=>$(k).textContent=t(k));
 $('kpi').innerHTML=D.kpi.map(k=>`<div><b dir="ltr">${k[0]}</b><span>${k[i+1]}</span></div>`).join('');
 $('jobs').innerHTML=D.jobs.map(j=>`<article class="job"><time>${j.d[i]}</time><div><h3>${j.t[i]}</h3><p class="org">${j.o}</p><ul>${j.b.map(b=>`<li>${b[i]}</li>`).join('')}</ul></div></article>`).join('');
-$('skillList').innerHTML=D.skills.map(s=>`<div><dt>${s[0][i]}</dt><dd>${s[1][i]}</dd></div>`).join('');
+$('skillList').innerHTML=D.skills.map(s=>`<div class="sk"><h3>${s[0][i]}</h3><div class="chips">${s[1][i].split(/[,،]\s*/).map(x=>`<span>${x}</span>`).join('')}</div></div>`).join('');
 $('eduList').innerHTML=D.edu.map(e=>`<p>${e[i]}</p>`).join('');
-$('cvList').innerHTML=D.cvs.map(c=>`<div class="cv"><div><h3>${c[1][i]}</h3><p>${c[2][i]}</p></div><div><a class="btn sm" href="cv/${c[0]}" target="_blank" rel="noopener">${t('view')}</a><a class="btn main sm" href="cv/${c[0]}" download>${t('dl')}</a></div></div>`).join('');
+$('cvList').innerHTML=D.cvs.map((c,n)=>`<div class="cvc"><div class="fl">${['🇪🇺','🇹🇳','🇨🇦'][n]}</div><h3>${c[1][i]}</h3><p>${c[2][i]}</p><div class="act"><a class="btn sm" href="${c[0]}" target="_blank" rel="noopener">${t('view')}</a><a class="btn main sm" href="${c[0]}" download="Belhassen-Jouini-CV-${['Europe','Tunisie','Canada-ATS'][n]}.pdf">${t('dl')}</a></div></div>`).join('');
 $('mail').textContent=P.mail;$('mail').href='mailto:'+P.mail;
 $('ctBtns').innerHTML=`<a class="btn main" href="mailto:${P.mail}">${D.wmail[i]}</a><a class="btn" href="https://wa.me/${P.tel.replace(/\D/g,'')}" target="_blank" rel="noopener">WhatsApp</a><a class="btn" href="${P.in}" target="_blank" rel="noopener">LinkedIn</a>`;
 $('ctList').innerHTML=`<li>${D.ct[0][i]} · <a href="tel:${P.tel.replace(/\s/g,'')}">${P.tel}</a></li><li>${D.ct[1][i]}</li>`;
 $('foot').textContent=t('foot');
+$('tag').textContent=D.ct[0][i];
+D.chips.forEach((c,n)=>$('ch'+(n+1)).innerHTML=`<b>${c[i][0]}</b><span>${c[i][1]}</span>`);
+fx();
 document.title=l==='fr'?'Belhassen Jouini — Gestion des stocks et logistique':'Belhassen Jouini — تسيير المخزون واللوجستيك';
 document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===l));
 try{localStorage.setItem('pf_lang',l)}catch(e){}
