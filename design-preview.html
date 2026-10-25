@@ -1,0 +1,915 @@
+
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Belhassen Jouini | Portfolio Premium — Aperçu</title>
+  <meta name="description" content="Belhassen Jouini : professionnel de la logistique, gestion des stocks, opérations d’entrepôt et e-commerce. CV disponibles pour la Tunisie, l’Europe et le Canada.">
+  <meta name="theme-color" content="#082c60">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #082c60;
+      --blue: #1677c8;
+      --gold: #d9b56d;
+      --pale: #edf4fc;
+      --ink: #14233b;
+      --muted: #586982;
+      --line: #dce6f2;
+      --white: #fff;
+      --radius: 20px;
+      --shadow: 0 12px 35px rgba(8, 44, 96, .09);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Cairo", Arial, sans-serif;
+      color: var(--ink);
+      line-height: 1.8;
+      background: var(--white);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin-inline: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .logo {
+      font-weight: 900;
+      color: var(--navy);
+      font-size: 1.2rem;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    nav a:hover { color: var(--blue); }
+
+    .tools {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .lang button {
+      border: 1px solid var(--line);
+      background: white;
+      padding: 7px 10px;
+      border-radius: 9px;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 700;
+    }
+
+    .lang button[aria-pressed="true"] {
+      background: var(--navy);
+      color: white;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: white;
+      padding: 82px 0 100px;
+      background:
+        radial-gradient(ellipse at 85% 20%, rgba(22,119,200,.5), transparent 45%),
+        linear-gradient(135deg, #061e42, #0a3b7d);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 50%;
+      inset-inline-end: -120px;
+      bottom: -180px;
+      box-shadow: 0 0 0 35px rgba(255,255,255,.025),
+                  0 0 0 70px rgba(255,255,255,.025);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: #f1d69c;
+      border: 1px solid rgba(217,181,109,.5);
+      background: rgba(217,181,109,.08);
+      padding: 5px 15px;
+      border-radius: 30px;
+      font-size: .9rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+      line-height: 1.12;
+      letter-spacing: -.03em;
+      font-weight: 900;
+    }
+
+    .role {
+      color: #a9d8ff;
+      font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+      font-weight: 800;
+      margin: 20px 0 10px;
+    }
+
+    .intro {
+      max-width: 620px;
+      color: #e0eaf7;
+      font-size: 1.05rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 20px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--navy);
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn.primary {
+      background: var(--gold);
+      color: #182844;
+      border-color: var(--gold);
+    }
+
+    .btn.outline {
+      background: transparent;
+      color: white;
+      border-color: rgba(255,255,255,.65);
+    }
+
+    .portrait {
+      max-width: 340px;
+      width: 100%;
+      justify-self: center;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 48% 48% 22px 22px;
+      border: 5px solid rgba(255,255,255,.3);
+      box-shadow: 0 24px 60px rgba(0,0,0,.25);
+      background: #e8f0fa;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: -40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .stat {
+      text-align: center;
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: 18px;
+      padding: 22px 10px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--navy);
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      font-weight: 900;
+      line-height: 1.4;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    section { padding: 75px 0; }
+
+    section.alternate { background: var(--pale); }
+
+    .section-title {
+      color: var(--navy);
+      font-size: clamp(1.7rem, 4vw, 2.3rem);
+      font-weight: 900;
+      margin: 0 0 30px;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 58px;
+      height: 4px;
+      margin-top: 10px;
+      background: var(--gold);
+      border-radius: 4px;
+    }
+
+    .about {
+      max-width: 850px;
+      font-size: 1.08rem;
+      color: #35445b;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .date {
+      display: inline-block;
+      background: var(--pale);
+      color: var(--blue);
+      border-radius: 7px;
+      padding: 3px 11px;
+      font-size: .85rem;
+      font-weight: 800;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin: 10px 0 3px;
+      font-size: 1.15rem;
+    }
+
+    .company {
+      color: var(--muted);
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+
+    .card ul { padding-inline-start: 22px; margin-bottom: 0; }
+
+    .card li { margin-bottom: 5px; }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 17px;
+    }
+
+    .skill {
+      border-top: 4px solid var(--gold);
+    }
+
+    .skill h3 { margin-top: 0; }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--pale);
+      color: var(--navy);
+      border-radius: 7px;
+      padding: 4px 10px;
+      font-size: .84rem;
+      font-weight: 700;
+    }
+
+    .education-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .education-list .card { box-shadow: none; }
+
+    .cv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .cv-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .cv-icon { font-size: 2rem; }
+
+    .cv-card p {
+      color: var(--muted);
+      flex: 1;
+      margin: 0 0 10px;
+    }
+
+    .cv-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #061e42, #0a3b7d);
+      color: white;
+      border-radius: 26px;
+      padding: clamp(25px, 5vw, 55px);
+    }
+
+    .contact-box .section-title { color: white; }
+
+    .email {
+      display: inline-block;
+      color: #f1d69c;
+      font-size: clamp(1rem, 3.5vw, 1.7rem);
+      font-weight: 800;
+      overflow-wrap: anywhere;
+      border-bottom: 2px solid var(--gold);
+      direction: ltr;
+    }
+
+    .contact-box p { color: #d8e5f7; }
+
+    footer {
+      background: #051a38;
+      color: #d8e5f7;
+      text-align: center;
+      padding: 22px 0;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 850px) {
+      .navbar { flex-wrap: wrap; padding: 12px 0; }
+      nav { order: 3; width: 100%; gap: 14px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 35px; }
+      .portrait { max-width: 250px; grid-row: 1; }
+      .skills-grid, .cv-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 560px) {
+      .hero { padding: 55px 0 75px; }
+      .stats { gap: 7px; }
+      .stat { padding: 15px 5px; }
+      .stat span { font-size: .72rem; }
+      section { padding: 52px 0; }
+      .skills-grid, .cv-grid { grid-template-columns: 1fr; }
+      .card { padding: 19px; }
+      nav { overflow-x: auto; flex-wrap: nowrap; white-space: nowrap; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  
+    /* Premium visual direction — preview only; original homepage stays unchanged */
+    :root {
+      --navy: #080d19;
+      --blue: #2563eb;
+      --gold: #7dd3fc;
+      --pale: #f3f6fb;
+      --ink: #111827;
+      --muted: #64748b;
+      --line: #dbe3ef;
+      --white: #ffffff;
+      --radius: 18px;
+      --shadow: 0 18px 45px rgba(15, 23, 42, .08);
+    }
+    body { background: #fff; letter-spacing: -.01em; }
+    header { background: rgba(7, 12, 24, .96); border-bottom-color: rgba(255,255,255,.10); }
+    .logo { color: #fff; letter-spacing: .08em; }
+    nav a { color: #dbeafe; }
+    nav a:hover { color: var(--gold); }
+    .lang button { background: #111827; border-color: #334155; color: #e5e7eb; }
+    .lang button[aria-pressed="true"] { background: #2563eb; border-color: #2563eb; color: #fff; }
+    .hero { background: radial-gradient(ellipse at 78% 18%, rgba(37,99,235,.34), transparent 42%), linear-gradient(135deg, #070b14 0%, #101a31 62%, #102b55 100%); padding: 92px 0 110px; }
+    .hero::after { border-color: rgba(125,211,252,.18); box-shadow: 0 0 0 35px rgba(125,211,252,.035), 0 0 0 70px rgba(125,211,252,.025); }
+    .eyebrow { color: #bae6fd; border-color: rgba(125,211,252,.35); background: rgba(37,99,235,.15); }
+    .role { color: #93c5fd; }
+    .intro { color: #d1d9e8; }
+    .btn.primary { background: #2563eb; border-color: #2563eb; color: white; }
+    .btn.primary:hover { background: #1d4ed8; }
+    .btn.outline { border-color: rgba(191,219,254,.5); }
+    .portrait { border-radius: 24px; border: 1px solid rgba(255,255,255,.25); box-shadow: 0 28px 70px rgba(0,0,0,.42); }
+    .stat { border-radius: 16px; }
+    .stat strong { color: #1d4ed8; }
+    .section-title { color: #0b1730; }
+    .section-title::after { background: linear-gradient(90deg, #2563eb, #7dd3fc); }
+    .card { border-radius: 16px; box-shadow: 0 10px 30px rgba(15,23,42,.045); transition: transform .2s, box-shadow .2s; }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 18px 38px rgba(15,23,42,.09); }
+    .date, .tag { background: #eff6ff; color: #1d4ed8; }
+    .skill { border-top-color: #2563eb; }
+    .contact-box { background: radial-gradient(ellipse at 90% 10%, rgba(37,99,235,.35), transparent 40%), linear-gradient(135deg, #070b14, #12264a); }
+    .email { color: #bae6fd; border-bottom-color: #38bdf8; }
+    footer { background: #050812; }
+    @media (max-width: 850px) { .hero { padding: 65px 0 85px; } }
+
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container navbar">
+    <a class="logo" href="#top">B. JOUINI</a>
+    <nav id="nav" aria-label="Navigation principale"></nav>
+    <div class="tools">
+      <div class="lang" aria-label="Choisir la langue">
+        <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-lang="ar" aria-pressed="false">عربي</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow" id="eyebrow"></span>
+        <h1>Belhassen<br>JOUINI</h1>
+        <p class="role" id="role"></p>
+        <p class="intro" id="intro"></p>
+        <div class="actions">
+          <a class="btn primary" href="#cv" id="heroCv"></a>
+          <a class="btn outline" href="#contact" id="heroContact"></a>
+        </div>
+      </div>
+      <img
+        class="portrait"
+        src="1000093468.png"
+        alt="Portrait de Belhassen Jouini"
+        onerror="this.onerror=null;this.src='photo.jpg';this.onerror=function(){this.style.display='none'}"
+      >
+    </div>
+  </section>
+
+  <div class="container stats" id="stats"></div>
+
+  <section id="profil">
+    <div class="container">
+      <h2 class="section-title" id="aboutTitle"></h2>
+      <p class="about" id="about"></p>
+    </div>
+  </section>
+
+  <section class="alternate" id="exp">
+    <div class="container">
+      <h2 class="section-title" id="expTitle"></h2>
+      <div class="timeline" id="jobs"></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title" id="skillsTitle"></h2>
+      <div class="skills-grid" id="skillsList"></div>
+    </div>
+  </section>
+
+  <section class="alternate" id="formation">
+    <div class="container">
+      <h2 class="section-title" id="eduTitle"></h2>
+      <div class="education-list" id="education"></div>
+    </div>
+  </section>
+
+  <section id="cv">
+    <div class="container">
+      <h2 class="section-title" id="cvTitle"></h2>
+      <p class="about" id="cvIntro"></p>
+      <div class="cv-grid" id="cvList" style="margin-top:20px"></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <h2 class="section-title" id="contactTitle"></h2>
+        <a class="email" id="emailLink" href="mailto:jouinibelhassen715@gmail.com">
+          jouinibelhassen715@gmail.com
+        </a>
+        <p id="contactText"></p>
+        <div class="actions">
+          <a class="btn primary" id="emailButton" href="mailto:jouinibelhassen715@gmail.com"></a>
+          <a class="btn outline" id="whatsapp" href="https://wa.me/21624292113" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a class="btn outline" href="https://www.linkedin.com/in/belhassen-jouini-b397b112a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <p id="location"></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container" id="footer"></div>
+</footer>
+
+<script>
+  const profile = {
+    email: "jouinibelhassen715@gmail.com",
+    phone: "+216 24 292 113",
+    linkedin: "https://www.linkedin.com/in/belhassen-jouini-b397b112a/"
+  };
+
+  const content = {
+    fr: {
+      nav: [
+        ["Profil", "profil"],
+        ["Expérience", "exp"],
+        ["Compétences", "skills"],
+        ["Formation", "formation"],
+        ["CV", "cv"],
+        ["Contact", "contact"]
+      ],
+      eyebrow: "Logistique & gestion des stocks",
+      role: "Gestion des stocks · Logistique · Opérations d’entrepôt",
+      intro: "Près de 8 ans d’expérience en entrepôt à fort volume : réception, préparation des commandes, expédition, inventaires et encadrement d’équipe.",
+      heroCv: "Découvrir mes CV",
+      heroContact: "Me contacter",
+      stats: [
+        ["≈ 8 ans", "d’expérience"],
+        ["98 %", "précision des stocks"],
+        ["900", "commandes/jour en pointe"]
+      ],
+      aboutTitle: "Profil professionnel",
+      about: "Professionnel de la logistique et de la gestion des stocks, rigoureux et organisé. Expérience dans les flux e-commerce, les inventaires, le suivi des indicateurs de performance et l’encadrement d’une équipe. Formation technique en automatisme industriel et maintenance.",
+      expTitle: "Expérience professionnelle",
+      jobs: [
+        {
+          date: "Nov. 2024 – Aujourd’hui",
+          title: "Assistant responsable de stock",
+          company: "Arvea Nature — Tunis",
+          bullets: [
+            "Suivi des flux logistiques e-commerce et gestion des commandes en période de pointe.",
+            "Encadrement d’une équipe de 3 personnes et réalisation des inventaires.",
+            "Suivi des KPI sur Excel et Google Sheets et traitement des factures."
+          ]
+        },
+        {
+          date: "Oct. 2023 – Nov. 2024",
+          title: "Responsable des opérations d’entrepôt — supervision",
+          company: "Arvea Nature — Tunis",
+          bullets: [
+            "Supervision du stockage, de la logistique interne et de la distribution.",
+            "Amélioration des opérations de réception, de préparation et d’expédition."
+          ]
+        },
+        {
+          date: "Avr. 2019 – Oct. 2023",
+          title: "Employé de dépôt",
+          company: "Arvea Nature — Tunis",
+          bullets: [
+            "Réception, contrôle, rangement, préparation et expédition des marchandises.",
+            "Enregistrement des mouvements de stock et participation aux inventaires."
+          ]
+        },
+        {
+          date: "2010 – 2016",
+          title: "Technicien SAV et maintenance industrielle",
+          company: "MULTIVAC · PLASTIC TUNISIE — Tunis",
+          bullets: [
+            "Maintenance préventive et corrective de machines d’emballage.",
+            "Diagnostic des pannes mécaniques et électriques."
+          ]
+        }
+      ],
+      skillsTitle: "Compétences",
+      skills: [
+        ["Gestion d’entrepôt", ["Réception", "Picking / Packing", "Expédition", "Inventaires", "Traçabilité"]],
+        ["Pilotage", ["KPI", "Excel", "Google Sheets", "Tableaux de bord"]],
+        ["Encadrement", ["Équipe de 3 personnes", "Répartition des tâches", "Priorités"]],
+        ["Sécurité", ["SST", "HSE", "Premiers secours", "Incendie"]],
+        ["Technique", ["Automates Siemens", "SIMATIC Manager", "Maintenance"]],
+        ["Langues", ["Arabe : langue maternelle", "Français : professionnel", "Anglais : intermédiaire"]]
+      ],
+      eduTitle: "Formation et certifications",
+      education: [
+        ["BTS en Automatisme et informatique industrielle", "Centre Sectoriel de Formation en Électronique de Den Den — 2011"],
+        ["SST, premiers secours et lutte contre l’incendie", "Donia Formation & Sécurité — octobre 2022"],
+        ["Baccalauréat technique", "2005"]
+      ],
+      cvTitle: "Mes CV",
+      cvIntro: "Choisissez la version adaptée au marché ciblé. Vérifiez les noms des fichiers PDF dans votre dépôt GitHub.",
+      cvs: [
+        ["🇪🇺", "CV — Europe francophone", "France, Belgique, Luxembourg et Suisse romande.", "Bj_Europe.pdf"],
+        ["🇹🇳", "CV — Tunisie", "Gestion des stocks, entrepôt et supervision logistique.", "Bj_Tunis.pdf"],
+        ["🇨🇦", "CV — Canada (ATS)", "Version destinée aux candidatures en ligne.", "Bj_ATS_Canda.pdf"]
+      ],
+      view: "Voir le CV",
+      download: "Télécharger",
+      contactTitle: "Contact professionnel",
+      emailButton: "Envoyer un e-mail",
+      contactText: "Ouvert aux opportunités en Tunisie, en Europe francophone et au Canada.",
+      location: "Tunis, Tunisie",
+      footer: "© " + new Date().getFullYear() + " Belhassen Jouini — Tous droits réservés."
+    },
+
+    ar: {
+      nav: [
+        ["نبذة", "profil"],
+        ["الخبرة", "exp"],
+        ["المهارات", "skills"],
+        ["التكوين", "formation"],
+        ["السيرة الذاتية", "cv"],
+        ["اتصل بي", "contact"]
+      ],
+      eyebrow: "اللوجستيك وتسيير المخزون",
+      role: "تسيير المخزون · اللوجستيك · عمليات المستودعات",
+      intro: "قرابة 8 سنوات من الخبرة في المستودعات ذات حجم العمل الكبير، تشمل الاستلام وتحضير الطلبيات والشحن والجرد وتأطير الفريق.",
+      heroCv: "اكتشف سيرتي الذاتية",
+      heroContact: "تواصل معي",
+      stats: [
+        ["قرابة 8 سنوات", "خبرة مهنية"],
+        ["98٪", "دقة المخزون"],
+        ["900", "طلبية يومياً في الذروة"]
+      ],
+      aboutTitle: "الملف المهني",
+      about: "مختص في اللوجستيك وتسيير المخزون، يتميز بالدقة والتنظيم. لدي خبرة في تدفقات التجارة الإلكترونية، والجرد، ومتابعة مؤشرات الأداء، وتأطير فريق عمل. كما أمتلك تكويناً تقنياً في الأتمتة الصناعية والصيانة.",
+      expTitle: "الخبرة المهنية",
+      jobs: [
+        {
+          date: "نوفمبر 2024 – إلى اليوم",
+          title: "مساعد مسؤول مخزون",
+          company: "Arvea Nature — تونس",
+          bullets: [
+            "متابعة تدفقات اللوجستيك الخاصة بالتجارة الإلكترونية وإدارة الطلبيات في فترات الذروة.",
+            "تأطير فريق من 3 أشخاص وإنجاز عمليات الجرد.",
+            "متابعة مؤشرات الأداء باستعمال Excel وGoogle Sheets ومعالجة الفواتير."
+          ]
+        },
+        {
+          date: "أكتوبر 2023 – نوفمبر 2024",
+          title: "مسؤول عمليات المستودع — إشراف",
+          company: "Arvea Nature — تونس",
+          bullets: [
+            "الإشراف على التخزين واللوجستيك الداخلي والتوزيع.",
+            "تحسين عمليات الاستلام وتحضير الطلبيات والشحن."
+          ]
+        },
+        {
+          date: "أفريل 2019 – أكتوبر 2023",
+          title: "عون مستودع",
+          company: "Arvea Nature — تونس",
+          bullets: [
+            "استلام البضائع ومراقبتها وترتيبها وتحضيرها للشحن.",
+            "تسجيل حركات المخزون والمشاركة في عمليات الجرد."
+          ]
+        },
+        {
+          date: "2010 – 2016",
+          title: "تقني خدمة ما بعد البيع وصيانة صناعية",
+          company: "MULTIVAC · PLASTIC TUNISIE — تونس",
+          bullets: [
+            "الصيانة الوقائية والإصلاحية لآلات التعبئة والتغليف.",
+            "تشخيص الأعطال الميكانيكية والكهربائية."
+          ]
+        }
+      ],
+      skillsTitle: "المهارات",
+      skills: [
+        ["إدارة المستودعات", ["الاستلام", "تحضير الطلبيات", "الشحن", "الجرد", "تتبع البضائع"]],
+        ["المتابعة", ["مؤشرات الأداء", "Excel", "Google Sheets", "لوحات المتابعة"]],
+        ["التأطير", ["فريق من 3 أشخاص", "توزيع المهام", "ترتيب الأولويات"]],
+        ["السلامة", ["السلامة المهنية", "HSE", "الإسعافات الأولية", "مكافحة الحرائق"]],
+        ["التقنية", ["أجهزة Siemens", "SIMATIC Manager", "الصيانة"]],
+        ["اللغات", ["العربية: اللغة الأم", "الفرنسية: مستوى مهني", "الإنجليزية: مستوى متوسط"]]
+      ],
+      eduTitle: "التكوين والشهادات",
+      education: [
+        ["شهادة تقني سامٍ في الأتمتة والإعلامية الصناعية", "المركز القطاعي للتكوين في الإلكترونيك بدن دن — 2011"],
+        ["السلامة المهنية والإسعافات الأولية ومكافحة الحرائق", "Donia Formation & Sécurité — أكتوبر 2022"],
+        ["باكالوريا تقنية", "2005"]
+      ],
+      cvTitle: "السيرة الذاتية",
+      cvIntro: "اختر النسخة المناسبة لسوق العمل المستهدف. تأكد من أسماء ملفات PDF في مستودع GitHub.",
+      cvs: [
+        ["🇪🇺", "السيرة الذاتية — أوروبا الفرنكوفونية", "فرنسا وبلجيكا ولوكسمبورغ وسويسرا الناطقة بالفرنسية.", "Bj_Europe.pdf"],
+        ["🇹🇳", "السيرة الذاتية — تونس", "تسيير المخزون والمستودعات والإشراف اللوجستي.", "Bj_Tunis.pdf"],
+        ["🇨🇦", "السيرة الذاتية — كندا ATS", "نسخة موجهة للترشح عبر الإنترنت.", "Bj_ATS_Canda.pdf"]
+      ],
+      view: "عرض السيرة",
+      download: "تحميل",
+      contactTitle: "التواصل المهني",
+      emailButton: "إرسال بريد إلكتروني",
+      contactText: "منفتح على فرص العمل في تونس وأوروبا الناطقة بالفرنسية وكندا.",
+      location: "تونس العاصمة، تونس",
+      footer: "© " + new Date().getFullYear() + " بلحسن الجويني — جميع الحقوق محفوظة."
+    }
+  };
+
+  const $ = id => document.getElementById(id);
+  let currentLang = "fr";
+
+  function addText(tag, text, className) {
+    const el = document.createElement(tag);
+    if (className) el.className = className;
+    el.textContent = text;
+    return el;
+  }
+
+  function render() {
+    const d = content[currentLang];
+    const arabic = currentLang === "ar";
+
+    document.documentElement.lang = currentLang;
+    document.documentElement.dir = arabic ? "rtl" : "ltr";
+
+    $("nav").replaceChildren(...d.nav.map(([label, href]) => {
+      const a = addText("a", label);
+      a.href = "#" + href;
+      return a;
+    }));
+
+    [
+      ["eyebrow", "eyebrow"],
+      ["role", "role"],
+      ["intro", "intro"],
+      ["heroCv", "heroCv"],
+      ["heroContact", "heroContact"],
+      ["aboutTitle", "aboutTitle"],
+      ["about", "about"],
+      ["expTitle", "expTitle"],
+      ["skillsTitle", "skillsTitle"],
+      ["eduTitle", "eduTitle"],
+      ["cvTitle", "cvTitle"],
+      ["cvIntro", "cvIntro"],
+      ["contactTitle", "contactTitle"],
+      ["emailButton", "emailButton"],
+      ["contactText", "contactText"],
+      ["location", "location"],
+      ["footer", "footer"]
+    ].forEach(([id, key]) => $(id).textContent = d[key]);
+
+    $("stats").replaceChildren(...d.stats.map(([value, label]) => {
+      const box = document.createElement("div");
+      box.className = "stat";
+      box.append(addText("strong", value), addText("span", label));
+      return box;
+    }));
+
+    $("jobs").replaceChildren(...d.jobs.map(job => {
+      const article = document.createElement("article");
+      article.className = "card";
+      article.append(addText("span", job.date, "date"));
+      article.append(addText("h3", job.title));
+      article.append(addText("p", job.company, "company"));
+
+      const ul = document.createElement("ul");
+      job.bullets.forEach(text => ul.append(addText("li", text)));
+      article.append(ul);
+      return article;
+    }));
+
+    $("skillsList").replaceChildren(...d.skills.map(([title, tags]) => {
+      const card = document.createElement("article");
+      card.className = "card skill";
+      card.append(addText("h3", title));
+
+      const tagList = document.createElement("div");
+      tagList.className = "tags";
+      tags.forEach(tag => tagList.append(addText("span", tag, "tag")));
+      card.append(tagList);
+      return card;
+    }));
+
+    $("education").replaceChildren(...d.education.map(([title, detail]) => {
+      const card = document.createElement("article");
+      card.className = "card";
+      card.append(addText("h3", title));
+      card.append(addText("p", detail));
+      return card;
+    }));
+
+    $("cvList").replaceChildren(...d.cvs.map(([icon, title, desc, file]) => {
+      const card = document.createElement("article");
+      card.className = "card cv-card";
+      card.append(addText("span", icon, "cv-icon"));
+      card.append(addText("h3", title));
+      card.append(addText("p", desc));
+
+      const actions = document.createElement("div");
+      actions.className = "cv-actions";
+
+      const view = addText("a", d.view, "btn");
+      view.href = file;
+      view.target = "_blank";
+      view.rel = "noopener noreferrer";
+
+      const download = addText("a", d.download, "btn primary");
+      download.href = file;
+      download.setAttribute("download", file);
+
+      actions.append(view, download);
+      card.append(actions);
+      return card;
+    }));
+
+    document.querySelectorAll("[data-lang]").forEach(button => {
+      button.setAttribute(
+        "aria-pressed",
+        String(button.dataset.lang === currentLang)
+      );
+    });
+
+    document.title = arabic
+      ? "بلحسن الجويني | اللوجستيك وتسيير المخزون"
+      : "Belhassen Jouini | Logistique & Gestion des stocks";
+
+    try {
+      localStorage.setItem("portfolio-language", currentLang);
+    } catch (_) {}
+  }
+
+  document.querySelectorAll("[data-lang]").forEach(button => {
+    button.addEventListener("click", () => {
+      currentLang = button.dataset.lang;
+      render();
+    });
+  });
+
+  try {
+    const saved = localStorage.getItem("portfolio-language");
+    if (saved === "ar" || saved === "fr") currentLang = saved;
+  } catch (_) {}
+
+  render();
+</script>
+</body>
+</html>
