@@ -497,6 +497,18 @@ a:focus-visible,button:focus-visible{outline:3px solid #1677c8;outline-offset:4p
 }
 @media(prefers-reduced-motion:reduce){.card,.stat,.skill-card,.cv-card,.navbar a{transition:none}}
 
+
+/* Final premium pass: executive portfolio layout and mobile readability */
+main,section{scroll-margin-top:88px}
+.container{width:min(1180px,92%)}
+.hero,.hero-grid{min-width:0}
+.card,.stat,.skill-card,.cv-card{border-radius:18px}
+.cv-card:hover{border-color:#b6d4f5;transform:translateY(-2px)}
+button,.btn{min-height:44px}
+@media(min-width:1000px){.hero-grid{gap:clamp(28px,5vw,72px)}section{padding-block:clamp(44px,6vw,78px)}}
+@media(max-width:560px){.container{width:min(100% - 28px,1180px)}.hero-grid{grid-template-columns:minmax(0,1fr)}.hero p{font-size:15px}.navbar{gap:6px}.navbar a{white-space:nowrap;padding:8px 10px}}
+@media(prefers-reduced-motion:reduce){.cv-card{transition:none}}
+
 </style>
 </head>
 
