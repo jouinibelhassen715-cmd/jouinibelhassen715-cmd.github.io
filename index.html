@@ -453,6 +453,25 @@ img{max-width:100%;height:auto}
 @media(max-width:560px){.navbar{gap:12px}.hero-grid{gap:26px}section{scroll-margin-top:70px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.stat,.skill-card,.cv-card,nav a{transition:none}}
 
+/* Final responsive and accessibility refinement */
+:root{scrollbar-gutter:stable}
+section{scroll-margin-top:96px}
+.hero-grid>*{min-width:0}
+.stats,.skills-grid,.cv-grid{align-items:stretch}
+.stat,.skill-card,.cv-card,.card{min-width:0;overflow-wrap:anywhere}
+a,button{touch-action:manipulation}
+a:focus-visible,button:focus-visible{outline:3px solid #4da3ff;outline-offset:4px}
+input,select,textarea{max-width:100%;font:inherit}
+@media(max-width:560px){
+  .container{width:min(100% - 28px,1120px)}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat{min-width:0}
+  .hero-grid{grid-template-columns:minmax(0,1fr)}
+  .portrait{width:min(100%,230px);margin-inline:auto}
+  nav a{padding:8px 10px;white-space:nowrap}
+}
+@media(min-width:1200px){.container{max-width:1180px}}
+
 </style>
 </head>
 
