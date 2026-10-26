@@ -509,6 +509,22 @@ button,.btn{min-height:44px}
 @media(max-width:560px){.container{width:min(100% - 28px,1180px)}.hero-grid{grid-template-columns:minmax(0,1fr)}.hero p{font-size:15px}.navbar{gap:6px}.navbar a{white-space:nowrap;padding:8px 10px}}
 @media(prefers-reduced-motion:reduce){.cv-card{transition:none}}
 
+
+/* UI refinement: executive portfolio navigation, section rhythm, and CV cards */
+header{box-shadow:0 8px 26px -24px rgba(8,44,96,.5)}
+.navbar{width:min(1240px,92%);min-width:0}
+.hero{isolation:isolate}
+.hero-grid{width:min(1180px,92%);grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr)}
+.portrait{box-shadow:0 28px 65px -30px rgba(0,0,0,.55);border:5px solid rgba(255,255,255,.14)}
+section .container{min-width:0}
+.timeline,.skills-grid,.cv-grid{align-items:stretch}
+.cv-card{height:100%;display:flex;flex-direction:column}
+.cv-card .btn{align-self:flex-start;margin-top:auto}
+footer{padding-inline:14px}
+@media(min-width:1200px){.hero{padding-block:96px 110px}.hero-grid{gap:clamp(48px,7vw,92px)}}
+@media(max-width:900px){.navbar{flex-wrap:wrap;padding-block:12px}.navbar nav{order:3;width:100%;justify-content:center;gap:8px}.tools{margin-inline-start:auto}.hero-grid{grid-template-columns:minmax(0,1fr) minmax(200px,.7fr);gap:28px}.portrait{max-width:100%}}
+@media(max-width:620px){.navbar{gap:8px}.navbar nav{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding-bottom:5px}.hero-grid{grid-template-columns:minmax(0,1fr);text-align:center}.hero-grid .actions{justify-content:center}.portrait{width:min(230px,68vw);margin:22px auto 0}.timeline{gap:14px}.cv-card .btn{align-self:stretch;text-align:center}}
+
 </style>
 </head>
 
