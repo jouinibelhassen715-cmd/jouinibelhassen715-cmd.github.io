@@ -472,6 +472,31 @@ input,select,textarea{max-width:100%;font:inherit}
 }
 @media(min-width:1200px){.container{max-width:1180px}}
 
+/* Premium executive portfolio finish */
+:root{--portfolio-ink:#0b1830;--portfolio-blue:#176fc1;--portfolio-line:#dce7f4}
+body{letter-spacing:.002em}
+.hero{isolation:isolate}
+.hero-grid{align-items:center}
+.hero h1{letter-spacing:-.035em;text-wrap:balance}
+section h2{letter-spacing:-.025em;text-wrap:balance}
+.card,.stat,.skill-card,.cv-card{border:1px solid var(--portfolio-line);box-shadow:0 10px 28px -24px rgba(8,44,96,.65);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card:hover,.skill-card:hover,.stat:hover{border-color:#b6d4f5;box-shadow:0 18px 38px -25px rgba(8,44,96,.48)}
+.cv-card{background:linear-gradient(145deg,#fff,#f5f9ff)}
+.navbar{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.navbar a{border-radius:9px;transition:background .18s,color .18s}
+.navbar a:hover{background:#eaf3ff;color:#082c60}
+.btn,button{touch-action:manipulation}
+a:focus-visible,button:focus-visible{outline:3px solid #1677c8;outline-offset:4px}
+@media(max-width:560px){
+ .hero{padding-block:34px}
+ .hero h1{font-size:clamp(2rem,9vw,3rem);line-height:1.12}
+ .stats{gap:10px}
+ .stat{padding:14px 12px}
+ .cv-grid,.skills-grid{grid-template-columns:minmax(0,1fr)}
+ .navbar{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}
+}
+@media(prefers-reduced-motion:reduce){.card,.stat,.skill-card,.cv-card,.navbar a{transition:none}}
+
 </style>
 </head>
 
