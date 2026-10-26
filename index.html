@@ -525,6 +525,33 @@ footer{padding-inline:14px}
 @media(max-width:900px){.navbar{flex-wrap:wrap;padding-block:12px}.navbar nav{order:3;width:100%;justify-content:center;gap:8px}.tools{margin-inline-start:auto}.hero-grid{grid-template-columns:minmax(0,1fr) minmax(200px,.7fr);gap:28px}.portrait{max-width:100%}}
 @media(max-width:620px){.navbar{gap:8px}.navbar nav{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding-bottom:5px}.hero-grid{grid-template-columns:minmax(0,1fr);text-align:center}.hero-grid .actions{justify-content:center}.portrait{width:min(230px,68vw);margin:22px auto 0}.timeline{gap:14px}.cv-card .btn{align-self:stretch;text-align:center}}
 
+
+
+/* REAL REDESIGN OVERRIDE — Executive Portfolio */
+:root{--navy:#07172f;--blue:#1b76d2;--gold:#e5c17a;--pale:#edf4fc}
+body{background:#f3f6fb!important;color:#12223b!important}
+header{background:rgba(248,251,255,.94)!important;border-bottom:1px solid #dbe6f3!important;box-shadow:0 10px 35px -28px #07172f!important}
+.navbar{min-height:82px!important}
+.logo{font-size:1.3rem!important;letter-spacing:-.03em}
+.hero{padding:clamp(60px,8vw,110px) 0 clamp(70px,9vw,125px)!important;background:radial-gradient(ellipse at 85% 10%,#1b76d2 0%,transparent 42%),linear-gradient(125deg,#06162d,#0a2c59 62%,#0b4178)!important}
+.hero-grid{gap:clamp(38px,7vw,100px)!important}
+.eyebrow{border-radius:8px!important;letter-spacing:.02em}
+.hero h1{font-size:clamp(2.8rem,6vw,5.4rem)!important;line-height:1.03!important}
+.portrait{border-radius:28px!important;aspect-ratio:4/5!important;border:1px solid #ffffff55!important;box-shadow:0 35px 80px -28px #0009!important;max-width:360px!important}
+.stats{gap:16px!important;margin-top:-46px!important}
+.stat{border-radius:20px!important;padding:25px 14px!important;background:linear-gradient(145deg,#fff,#f7faff)!important;box-shadow:0 20px 45px -32px #07172f55!important}
+section{padding:clamp(60px,7vw,92px) 0!important}
+section.alternate{background:linear-gradient(180deg,#edf4fc,#f4f7fc)!important}
+.section-title{font-size:clamp(1.9rem,4vw,2.6rem)!important}
+.card{border-radius:18px!important;background:linear-gradient(145deg,#fff,#f9fbff)!important;padding:clamp(20px,2.5vw,30px)!important;box-shadow:0 15px 35px -30px #07172f55!important}
+.skills-grid,.cv-grid{gap:18px!important}
+.skill{border-top:4px solid var(--gold)!important}
+.cv-card{border-color:#d7e3f2!important}
+.cv-card .btn.primary{background:linear-gradient(135deg,#e5c17a,#f3d99b)!important;border-color:#e5c17a!important;color:#17243a!important}
+.contact-box{background:radial-gradient(ellipse at 90% 0%,#1b76d2,#0a2c59 55%,#06172f)!important;border-radius:28px!important}
+@media(min-width:1200px){.hero-grid{grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr)!important}}
+@media(max-width:620px){.hero{padding:42px 0 76px!important}.hero-grid{gap:20px!important}.portrait{border-radius:22px!important}.stats{gap:8px!important}.stat{padding:14px 8px!important}.stat span{font-size:.78rem!important}section{padding:48px 0!important}}
+
 </style>
 </head>
 
