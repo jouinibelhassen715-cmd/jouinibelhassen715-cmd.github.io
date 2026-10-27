@@ -552,6 +552,24 @@ section.alternate{background:linear-gradient(180deg,#edf4fc,#f4f7fc)!important}
 @media(min-width:1200px){.hero-grid{grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr)!important}}
 @media(max-width:620px){.hero{padding:42px 0 76px!important}.hero-grid{gap:20px!important}.portrait{border-radius:22px!important}.stats{gap:8px!important}.stat{padding:14px 8px!important}.stat span{font-size:.78rem!important}section{padding:48px 0!important}}
 
+
+
+/* FINAL POLISH — executive typography, buttons, and small-screen navigation */
+:root{scroll-behavior:smooth;scroll-padding-top:90px}
+header{position:sticky!important;top:0!important;z-index:50!important;backdrop-filter:blur(16px)!important}
+.navbar{gap:clamp(12px,2vw,28px)!important}
+.navbar nav{display:flex;align-items:center;gap:clamp(10px,1.7vw,24px);flex-wrap:wrap}
+.navbar nav a{font-weight:700!important;text-decoration:none!important;transition:color .18s ease}
+.navbar nav a:hover{color:var(--blue)!important}
+.btn{min-height:46px!important;border-radius:12px!important;font-weight:800!important;transition:transform .18s ease,box-shadow .18s ease!important}
+.btn:hover{transform:translateY(-2px)}
+.btn.outline{border-color:#b8cbe1!important;color:#f7fbff!important}
+#cv .cv-card{display:flex;flex-direction:column;gap:12px}
+#cv .cv-card .btn{margin-top:auto}
+#contact .email{overflow-wrap:anywhere}
+footer{padding:28px 0!important;color:#64748b!important}
+@media(max-width:760px){header{position:relative!important}.navbar{flex-wrap:wrap!important;padding-block:14px!important}.navbar nav{order:3;width:100%;overflow-x:auto;flex-wrap:nowrap!important;white-space:nowrap;padding-bottom:5px}.navbar nav a{flex:0 0 auto}.tools{margin-inline-start:auto!important}.hero-grid{grid-template-columns:minmax(0,1fr)!important}.hero-grid>div{order:2}.hero-grid .portrait{order:1;margin-inline:auto!important;width:min(68vw,280px)!important}.hero h1{font-size:clamp(2.6rem,12vw,4rem)!important}.actions{flex-wrap:wrap!important}.actions .btn{flex:1 1 150px;text-align:center}}
+
 </style>
 </head>
 
