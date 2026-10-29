@@ -581,6 +581,7 @@ footer{padding:28px 0!important;color:#64748b!important}
     <div class="tools">
       <div class="lang" aria-label="Choisir la langue">
         <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
         <button type="button" data-lang="ar" aria-pressed="false">عربي</button>
       </div>
     </div>
@@ -768,6 +769,195 @@ footer{padding:28px 0!important;color:#64748b!important}
       contactText: "Ouvert aux opportunités en Tunisie, en Europe francophone et au Canada.",
       location: "Tunis, Tunisie",
       footer: "© " + new Date().getFullYear() + " Belhassen Jouini — Tous droits réservés."
+    },
+
+    en: {
+      "nav": [
+        [
+          "Profile",
+          "profil"
+        ],
+        [
+          "Experience",
+          "exp"
+        ],
+        [
+          "Skills",
+          "skills"
+        ],
+        [
+          "Education",
+          "formation"
+        ],
+        [
+          "Resume",
+          "cv"
+        ],
+        [
+          "Contact",
+          "contact"
+        ]
+      ],
+      "eyebrow": "Logistics & Inventory Management",
+      "role": "Inventory Management · Logistics · Warehouse Operations",
+      "intro": "Nearly 8 years of experience in high-volume warehouses, covering receiving, order preparation, shipping, stocktaking and team supervision.",
+      "heroCv": "View my CVs",
+      "heroContact": "Contact me",
+      "stats": [
+        [
+          "≈ 8 years",
+          "of experience"
+        ],
+        [
+          "98%",
+          "inventory accuracy"
+        ],
+        [
+          "900",
+          "orders/day at peak"
+        ]
+      ],
+      "aboutTitle": "Professional Profile",
+      "about": "A rigorous and organised logistics and inventory professional with experience in e-commerce flows, stocktaking, performance indicators and team supervision. Technical background in industrial automation and maintenance.",
+      "expTitle": "Professional Experience",
+      "jobs": [
+        {
+          "date": "Nov 2024 – Present",
+          "title": "Assistant Stock Manager",
+          "company": "Arvea Nature — Tunis",
+          "bullets": [
+            "Manage e-commerce logistics flows and orders during peak periods.",
+            "Supervise a team of 3 and carry out stocktaking.",
+            "Track KPIs using Excel and Google Sheets and process invoices."
+          ]
+        },
+        {
+          "date": "Oct 2023 – Nov 2024",
+          "title": "Warehouse Operations Supervisor",
+          "company": "Arvea Nature — Tunis",
+          "bullets": [
+            "Supervised storage, internal logistics and distribution.",
+            "Improved receiving, order preparation and shipping operations."
+          ]
+        },
+        {
+          "date": "Apr 2019 – Oct 2023",
+          "title": "Warehouse Operative",
+          "company": "Arvea Nature — Tunis",
+          "bullets": [
+            "Received, checked, stored, picked and dispatched goods.",
+            "Recorded stock movements and took part in inventory counts."
+          ]
+        },
+        {
+          "date": "2010 – 2016",
+          "title": "After-Sales Service & Industrial Maintenance Technician",
+          "company": "MULTIVAC · PLASTIC TUNISIE — Tunis",
+          "bullets": [
+            "Performed preventive and corrective maintenance on packaging machines.",
+            "Diagnosed mechanical and electrical faults."
+          ]
+        }
+      ],
+      "skillsTitle": "Core Skills",
+      "skills": [
+        [
+          "Warehouse Management",
+          [
+            "Goods receiving",
+            "Picking / Packing",
+            "Shipping",
+            "Stocktaking",
+            "Traceability"
+          ]
+        ],
+        [
+          "Performance & Reporting",
+          [
+            "KPIs",
+            "Excel",
+            "Google Sheets",
+            "Dashboards"
+          ]
+        ],
+        [
+          "Team Supervision",
+          [
+            "Team of 3",
+            "Task allocation",
+            "Prioritisation"
+          ]
+        ],
+        [
+          "Safety",
+          [
+            "Occupational safety",
+            "HSE",
+            "First aid",
+            "Fire safety"
+          ]
+        ],
+        [
+          "Technical",
+          [
+            "Siemens PLCs",
+            "SIMATIC Manager",
+            "Maintenance"
+          ]
+        ],
+        [
+          "Languages",
+          [
+            "Arabic: native",
+            "French: professional",
+            "English: intermediate"
+          ]
+        ]
+      ],
+      "eduTitle": "Education & Certifications",
+      "education": [
+        [
+          "Higher Technician Diploma in Industrial Automation & IT",
+          "Sectoral Training Centre for Electronics, Den Den — 2011"
+        ],
+        [
+          "Occupational Safety, First Aid & Fire Safety",
+          "Donia Formation & Sécurité — October 2022"
+        ],
+        [
+          "Technical Baccalaureate",
+          "2005"
+        ]
+      ],
+      "cvTitle": "My CVs",
+      "cvIntro": "Choose the version suited to your target market. The PDF filenames must match the files in the GitHub repository.",
+      "cvs": [
+        [
+          "🇪🇺",
+          "CV — French-speaking Europe",
+          "France, Belgium, Luxembourg and French-speaking Switzerland.",
+          "Bj_Europe.pdf"
+        ],
+        [
+          "🇹🇳",
+          "CV — Tunisia",
+          "Inventory management, warehousing and logistics supervision.",
+          "Bj_Tunis.pdf"
+        ],
+        [
+          "🇨🇦",
+          "CV — Canada (ATS)",
+          "Version designed for online applications.",
+          "Bj_ATS_Canda.pdf"
+        ]
+      ],
+      "view": "View CV",
+      "download": "Download",
+      "contactTitle": "Professional Contact",
+      "emailButton": "Send an email",
+      "contactText": "Open to opportunities in Tunisia, French-speaking Europe and Canada.",
+      "location": "Tunis, Tunisia",
+      "footer": "© 2026 Belhassen Jouini — All rights reserved."
     },
 
     ar: {
@@ -979,7 +1169,9 @@ footer{padding:28px 0!important;color:#64748b!important}
 
     document.title = arabic
       ? "بلحسن الجويني | اللوجستيك وتسيير المخزون"
-      : "Belhassen Jouini | Logistique & Gestion des stocks";
+      : currentLang === "en"
+        ? "Belhassen Jouini | Logistics & Inventory Management"
+        : "Belhassen Jouini | Logistique & Gestion des stocks";
 
     try {
       localStorage.setItem("portfolio-language", currentLang);
@@ -995,7 +1187,7 @@ footer{padding:28px 0!important;color:#64748b!important}
 
   try {
     const saved = localStorage.getItem("portfolio-language");
-    if (saved === "ar" || saved === "fr") currentLang = saved;
+    if (saved === "ar" || saved === "fr" || saved === "en") currentLang = saved;
   } catch (_) {}
 
   render();
