@@ -226,7 +226,7 @@
 
     .stats {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 15px;
       margin-top: -40px;
       position: relative;
@@ -693,12 +693,13 @@ footer{padding:28px 0!important;color:#64748b!important}
       heroCv: "Découvrir mes CV",
       heroContact: "Me contacter",
       stats: [
-        ["≈ 8 ans", "d’expérience"],
-        ["98 %", "précision des stocks"],
-        ["900", "commandes/jour en pointe"]
+        ["≈ 8 ans", "d’expérience en entrepôt"],
+        ["2 ans", "en postes de responsabilité"],
+        ["150–250", "commandes reçues / jour (normal)"],
+        ["800", "commandes reçues / jour (pointe)"]
       ],
       aboutTitle: "Profil professionnel",
-      about: "Professionnel de la logistique et de la gestion des stocks, rigoureux et organisé. Expérience dans les flux e-commerce, les inventaires, le suivi des indicateurs de performance et l’encadrement d’une équipe. Formation technique en automatisme industriel et maintenance.",
+      about: "Gestionnaire de stocks avec près de 8 ans d’expérience en entrepôt à fort volume, dont 2 ans à des postes de responsabilité. Fiabilisation des stocks par les inventaires réguliers et l’analyse des écarts, suivi des indicateurs sur Excel et Google Sheets, et encadrement quotidien de l’équipe dans le respect des règles de sécurité.",
       expTitle: "Expérience professionnelle",
       jobs: [
         {
@@ -706,9 +707,10 @@ footer{padding:28px 0!important;color:#64748b!important}
           title: "Assistant responsable de stock",
           company: "Arvea Nature — Tunis",
           bullets: [
-            "Suivi des flux logistiques e-commerce et gestion des commandes en période de pointe.",
-            "Encadrement d’une équipe de 3 personnes et réalisation des inventaires.",
-            "Suivi des KPI sur Excel et Google Sheets et traitement des factures."
+            "Gestion des stocks de la réception à la distribution, répartition des priorités de l’équipe et accompagnement de la formation des collègues.",
+            "Jusqu’à 1 300 commandes en cours en période de pointe ; 150 à 250 commandes reçues par jour en temps normal, 200 à 350 les jours de promotion et jusqu’à 800 en pointe.",
+            "Suivi de chaque commande jusqu’à sa facture ; 98 % de précision des stocks grâce aux inventaires réguliers et à l’analyse des écarts.",
+            "Suivi des volumes, des retards et des écarts sur Excel et Google Sheets, dans le respect des règles SST, de la qualité et de la traçabilité."
           ]
         },
         {
@@ -730,12 +732,19 @@ footer{padding:28px 0!important;color:#64748b!important}
           ]
         },
         {
-          date: "2010 – 2016",
-          title: "Technicien SAV et maintenance industrielle",
-          company: "MULTIVAC · PLASTIC TUNISIE — Tunis",
+          date: "Avr. – Juil. 2016",
+          title: "Technicien SAV",
+          company: "MULTIVAC — Tunis",
           bullets: [
-            "Maintenance préventive et corrective de machines d’emballage.",
-            "Diagnostic des pannes mécaniques et électriques."
+            "Maintenance de machines d’emballage et diagnostic des pannes mécaniques et électriques."
+          ]
+        },
+        {
+          date: "Sept. 2010 – Janv. 2011",
+          title: "Stagiaire maintenance",
+          company: "PLASTIC TUNISIE — Tunis",
+          bullets: [
+            "Suivi technique et maintenance des équipements de production."
           ]
         }
       ],
@@ -746,7 +755,7 @@ footer{padding:28px 0!important;color:#64748b!important}
         ["Encadrement", ["Équipe de 3 personnes", "Répartition des tâches", "Priorités"]],
         ["Sécurité", ["SST", "HSE", "Premiers secours", "Incendie"]],
         ["Technique", ["Automates Siemens", "SIMATIC Manager", "Maintenance"]],
-        ["Langues", ["Arabe : langue maternelle", "Français : professionnel", "Anglais : intermédiaire"]]
+        ["Langues", ["Arabe : langue maternelle", "Français : courant", "Anglais : notions (vocabulaire technique du stock), en progression"]]
       ],
       eduTitle: "Formation et certifications",
       education: [
@@ -785,12 +794,13 @@ footer{padding:28px 0!important;color:#64748b!important}
       heroCv: "اكتشف سيرتي الذاتية",
       heroContact: "تواصل معي",
       stats: [
-        ["قرابة 8 سنوات", "خبرة مهنية"],
-        ["98٪", "دقة المخزون"],
-        ["900", "طلبية يومياً في الذروة"]
+        ["قرابة 8 سنوات", "خبرة في المستودعات"],
+        ["عامان", "في مناصب مسؤولية"],
+        ["150–250", "طلبية يومياً في الظروف العادية"],
+        ["800", "طلبية يومياً في أوقات الذروة"]
       ],
       aboutTitle: "الملف المهني",
-      about: "مختص في اللوجستيك وتسيير المخزون، يتميز بالدقة والتنظيم. لدي خبرة في تدفقات التجارة الإلكترونية، والجرد، ومتابعة مؤشرات الأداء، وتأطير فريق عمل. كما أمتلك تكويناً تقنياً في الأتمتة الصناعية والصيانة.",
+      about: "مختص في تسيير المخزون بخبرة تقارب 8 سنوات في المستودعات ذات حجم العمل الكبير، منها عامان في مناصب مسؤولية. أعمل على ضمان دقة المخزون من خلال الجرد المنتظم وتحليل الفوارق، ومتابعة مؤشرات الأداء باستعمال Excel وGoogle Sheets، وتأطير الفريق يومياً مع احترام قواعد السلامة.",
       expTitle: "الخبرة المهنية",
       jobs: [
         {
@@ -798,9 +808,10 @@ footer{padding:28px 0!important;color:#64748b!important}
           title: "مساعد مسؤول مخزون",
           company: "Arvea Nature — تونس",
           bullets: [
-            "متابعة تدفقات اللوجستيك الخاصة بالتجارة الإلكترونية وإدارة الطلبيات في فترات الذروة.",
-            "تأطير فريق من 3 أشخاص وإنجاز عمليات الجرد.",
-            "متابعة مؤشرات الأداء باستعمال Excel وGoogle Sheets ومعالجة الفواتير."
+            "تسيير المخزون من الاستلام إلى التوزيع، وتحديد أولويات عمل الفريق والمساهمة في تكوين الزملاء.",
+            "حتى 1,300 طلبية جارية في فترات الذروة؛ من 150 إلى 250 طلبية مستلمة يومياً في الأيام العادية، ومن 200 إلى 350 في أيام العروض، وحتى 800 في أوقات الذروة.",
+            "متابعة كل طلبية إلى غاية إصدار فاتورتها، والمحافظة على دقة مخزون بنسبة 98٪ بفضل الجرد المنتظم وتحليل الفوارق.",
+            "متابعة الكميات والتأخيرات والفوارق باستعمال Excel وGoogle Sheets، مع احترام قواعد السلامة والجودة والتتبع."
           ]
         },
         {
@@ -822,12 +833,19 @@ footer{padding:28px 0!important;color:#64748b!important}
           ]
         },
         {
-          date: "2010 – 2016",
-          title: "تقني خدمة ما بعد البيع وصيانة صناعية",
-          company: "MULTIVAC · PLASTIC TUNISIE — تونس",
+          date: "أفريل – جويلية 2016",
+          title: "تقني خدمة ما بعد البيع",
+          company: "MULTIVAC — تونس",
           bullets: [
-            "الصيانة الوقائية والإصلاحية لآلات التعبئة والتغليف.",
-            "تشخيص الأعطال الميكانيكية والكهربائية."
+            "صيانة آلات التعبئة والتغليف وتشخيص الأعطال الميكانيكية والكهربائية."
+          ]
+        },
+        {
+          date: "سبتمبر 2010 – جانفي 2011",
+          title: "متربص في الصيانة",
+          company: "PLASTIC TUNISIE — تونس",
+          bullets: [
+            "المتابعة التقنية وصيانة معدات الإنتاج."
           ]
         }
       ],
@@ -838,7 +856,7 @@ footer{padding:28px 0!important;color:#64748b!important}
         ["التأطير", ["فريق من 3 أشخاص", "توزيع المهام", "ترتيب الأولويات"]],
         ["السلامة", ["السلامة المهنية", "HSE", "الإسعافات الأولية", "مكافحة الحرائق"]],
         ["التقنية", ["أجهزة Siemens", "SIMATIC Manager", "الصيانة"]],
-        ["اللغات", ["العربية: اللغة الأم", "الفرنسية: مستوى مهني", "الإنجليزية: مستوى متوسط"]]
+        ["اللغات", ["العربية: اللغة الأم", "الفرنسية: طلاقة", "الإنجليزية: مبادئ أولية (مصطلحات تقنية في المخزون)، في طور التحسّن"]]
       ],
       eduTitle: "التكوين والشهادات",
       education: [
